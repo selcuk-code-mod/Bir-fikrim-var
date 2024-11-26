@@ -58,6 +58,67 @@
   border: none;
   border-radius: 8px;
 }
+
+.team-slider {
+  padding: 2rem 0;
+}
+
+/* Slick dots stilleri */
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+/* Slick okları */
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+  background-color: #9c6814 !important;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  opacity: 1;
+}
+
+/* Kartlar arası boşluk */
+.team-slider .slick-slide {
+  margin: 0 10px;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 992px) {
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .modal-content {
     width: 85%;
