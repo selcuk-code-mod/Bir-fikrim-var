@@ -1,0 +1,329 @@
+.service-details {
+  /* =====Banner section===== */
+  .banner {
+    position: relative;
+    img {
+      opacity: 0.4;
+      max-height: 350px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .content {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+  // =====Business Service Detail=====
+  .business-service-details {
+    .service-search {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      form {
+        background-color: $shadowBlack;
+        input {
+          background-color: $shadowBlack;
+          border: none;
+          padding: 8px;
+          color: $whiteColor;
+          font-weight: normal;
+          width: 80%;
+        }
+        button {
+          background-color: $harvestGold;
+          border: none;
+          width: 18%;
+          padding: 10px;
+          border-radius: 2px 4px 4px 2px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    .details-link {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      ul {
+        li {
+          background-color: $shadowBlack;
+          padding: 10px;
+          -webkit-transition: ease 2s all;
+          -o-transition: ease 2s all;
+          transition: ease 2s all;
+          border: 1px solid rgba(255, 255, 255, 0.034);
+          margin-bottom: 20px;
+          a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            span {
+              margin-right: 10px;
+              -webkit-transition: ease 2s all;
+              -o-transition: ease 2s all;
+              transition: ease 2s all;
+              color: $harvestGold;
+            }
+          }
+          &:hover {
+            border: 1px dashed $harvestGold;
+          }
+          &:hover span {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+    .need-help {
+      background-color: $eerieBlack;
+      padding: 20px 10px;
+      .contact {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 20px;
+        row-gap: 12px;
+        a {
+          color: $whiteColor;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          &:hover {
+            color: $harvestGold;
+          }
+        }
+        .phone {
+          color: $harvestGold;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          &:hover {
+            color: $whiteColor;
+          }
+        }
+        .email {
+          color: $harvestGold;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          &:hover {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+    .city-visitors-guide {
+      img.guide-photo {
+        width: 100%;
+        max-height: 390px;
+        margin-bottom: 40px;
+      }
+      p {
+        margin-bottom: 35px;
+      }
+    }
+    .faq-page-price {
+      margin: 50px 0px;
+      h2 {
+        margin-bottom: 40px;
+      }
+      .faq-page {
+        .accordion-item {
+          background-color: transparent;
+          margin-bottom: 10px;
+          border: none;
+          .accordion-button {
+            background-color: transparent;
+            &:hover:focus {
+              border: none;
+              outline: none;
+            }
+          }
+
+          .accordion-button {
+            color: $whiteColor;
+          }
+          .accordion-body {
+            color: $gainsboroParagraph;
+          }
+          .accordion-button.collapsed {
+            color: $harvestGold;
+            ::after {
+              background-color: rebeccapurple;
+              color: $harvestGold;
+            }
+          }
+          .accordion-button:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
+      .price {
+        color: $gainsboroParagraph;
+        .monthly,
+        .yearly {
+          background-color: $eerieBlack;
+          padding: 18px;
+          margin-bottom: 40px;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          .value {
+            background-color: $harvestGold;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 4px;
+            border-radius: 2px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin-right: 0;
+            margin-left: auto;
+            margin-top: -34px;
+            -webkit-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+            border: 1px solid $harvestGold;
+          }
+          .check-logo {
+            background-color: $harvestGold;
+            padding: 5px 10px;
+            border: 1px solid $harvestGold;
+            -webkit-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+          }
+          .information {
+            .time {
+              border: 1px solid $shadowBlack;
+              padding: 4px 8px;
+              -webkit-transition: 2s;
+              -o-transition: 2s;
+              transition: 2s;
+            }
+            .rate {
+              color: $whiteColor;
+              small {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .monthly:hover,
+        .yearly:hover {
+          background-color: $shadowBlack;
+          .value {
+            background-color: transparent;
+          }
+          .information {
+            .time {
+              border: 1px solid $harvestGold;
+            }
+          }
+          .check-logo {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  /* =====Subscribe For The Exclusive Updates section===== */
+  .subscribe-updates {
+    background-color: $smokyBlack;
+    .subscribe.section-header {
+      margin-bottom: 0px;
+    }
+    .subscribe-email-field {
+      form {
+        input {
+          width: 75%;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          border-bottom: 1px solid rgba($gainsboroParagraph, 0.2);
+          padding: 10px 10px 10px 1px;
+        }
+        button {
+          margin-left: 10px;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          img {
+            width: 40px;
+          }
+          .subscribe-icons {
+            color: $harvestGold;
+          }
+        }
+      }
+      .police {
+        color: $platinum;
+        input {
+          border: 1px solid $harvestGold;
+          background-color: transparent;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+          &:focus {
+            -webkit-box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+            box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+          }
+        }
+        span {
+          a {
+            color: $platinum;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+/* ==============Responsive classes============== */
+/* Responsive: start 320px end: 1368px  */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+}

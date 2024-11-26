@@ -1,0 +1,449 @@
+.blog-details {
+  /* =====Banner section===== */
+  .banner {
+    position: relative;
+    img {
+      opacity: 0.4;
+      max-height: 350px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .content {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+  .post-details {
+    .blog-information {
+      .user {
+        color: $gainsboroParagraph;
+        img {
+          width: 20px;
+        }
+      }
+      .check-list {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        ul {
+          display: -ms-grid;
+          display: grid;
+          gap: 6px;
+          li {
+            color: $platinum;
+            i {
+              -webkit-transition: 2s;
+              -o-transition: 2s;
+              transition: 2s;
+            }
+            &:hover i {
+              color: $harvestGold;
+            }
+          }
+        }
+      }
+      .comment {
+        background-color: $eerieBlack;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        img {
+          position: absolute;
+          opacity: 0.4;
+        }
+      }
+      .share-comments {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        border-top: 1px solid $gainsboroParagraph;
+        border-bottom: 1px solid $gainsboroParagraph;
+        padding: 6px 0px;
+        margin: 30px 0px;
+        .share {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          h6 {
+            color: $harvestGold;
+          }
+          ul {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            gap: 14px;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            li {
+              a {
+                color: $gainsboroParagraph;
+                -webkit-transition: 2s;
+                -o-transition: 2s;
+                transition: 2s;
+              }
+              &:hover a {
+                color: $harvestGold;
+              }
+            }
+          }
+        }
+        .comments {
+          color: $gainsboroParagraph;
+          img {
+            width: 30px;
+          }
+        }
+      }
+      .recent-comments {
+        margin-top: 30px;
+        .recent {
+          border-bottom: 1px solid $harvestGold;
+        }
+        .author {
+          img {
+            width: 280px;
+          }
+        }
+        .author-comment {
+          .replay {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: $platinum;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s;
+            &:hover {
+              color: $harvestGold;
+            }
+          }
+          .name-date {
+            h6 {
+              color: $harvestGold;
+            }
+          }
+        }
+        hr {
+          opacity: 1;
+        }
+      }
+      .comment-two {
+        margin-left: 50px;
+      }
+      .comment-form-container {
+        margin-top: 50px;
+        padding: 20px;
+        border-radius: 10px;
+        .leave {
+          border-bottom: 1px solid $harvestGold;
+        }
+        .form-group {
+          margin-bottom: 15px;
+        }
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        input,
+        textarea {
+          width: 100%;
+          padding: 8px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border: 1px solid $shadowBlack;
+          outline: none;
+          border-radius: 5px;
+          background-color: $eerieBlack;
+        }
+        #formMessages {
+          margin-top: 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .right-side-post {
+    .service-search {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      form {
+        background-color: $shadowBlack;
+        input {
+          background-color: $shadowBlack;
+          border: none;
+          padding: 8px;
+          color: $whiteColor;
+          font-weight: normal;
+          width: 80%;
+        }
+        button {
+          background-color: $harvestGold;
+          border: none;
+          width: 18%;
+          padding: 10px;
+          border-radius: 2px 4px 4px 2px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    .details-link {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      ul {
+        li {
+          background-color: $shadowBlack;
+          padding: 10px;
+          -webkit-transition: ease 2s all;
+          -o-transition: ease 2s all;
+          transition: ease 2s all;
+          border: 1px solid rgba(255, 255, 255, 0.034);
+          margin-bottom: 20px;
+          a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            span {
+              margin-right: 10px;
+              -webkit-transition: ease 2s all;
+              -o-transition: ease 2s all;
+              transition: ease 2s all;
+              color: $harvestGold;
+            }
+          }
+          &:hover {
+            border: 1px dashed $harvestGold;
+          }
+          &:hover span {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+    .latest-post {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      .title {
+        position: relative;
+        margin-bottom: 40px;
+        .column {
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          margin-top: 10px;
+          background-color: $harvestGold;
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $platinum;
+            width: 20%;
+            height: 1px;
+          }
+        }
+      }
+      .post {
+        padding: 6px;
+        span {
+          color: $gainsboroParagraph;
+          opacity: 0.6;
+        }
+        .post-images {
+          width: 50%;
+          opacity: 0.6;
+        }
+        .post-content {
+          i {
+            color: $harvestGold;
+            font-size: 14px;
+          }
+          h6 {
+            line-height: 26px;
+          }
+        }
+      }
+    }
+    .gallery-post {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      .title {
+        position: relative;
+        margin-bottom: 40px;
+        .column {
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          margin-top: 10px;
+          background-color: $harvestGold;
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $platinum;
+            width: 20%;
+            height: 1px;
+          }
+        }
+      }
+      .gallery-images {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        .images {
+          overflow: hidden;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          img:hover {
+            -webkit-transform: rotate(1.1deg);
+            -ms-transform: rotate(1.1deg);
+            transform: rotate(1.1deg);
+          }
+        }
+      }
+    }
+    .tags-blog {
+      background-color: $eerieBlack;
+      padding: 10px;
+      margin-bottom: 10px;
+      .title {
+        margin-bottom: 40px;
+        position: relative;
+        .column {
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          margin-top: 10px;
+          background-color: $harvestGold;
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $gainsboroParagraph;
+            width: 20%;
+            height: 1px;
+          }
+        }
+      }
+      .tags {
+        text-align: center;
+        div {
+          padding: 8px 14px;
+          margin: 5px 8px;
+          border-radius: 2px;
+          border: 1px solid $shadowBlack;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          a {
+            color: $platinum;
+          }
+          &:hover {
+            background-color: $harvestGold;
+          }
+        }
+      }
+    }
+    .news-letter {
+      padding: 10px;
+      margin-bottom: 10px;
+      .title {
+        margin-bottom: 40px;
+        position: relative;
+        .column {
+          position: absolute;
+          height: 1px;
+          width: 100%;
+          margin-top: 10px;
+          background-color: $harvestGold;
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: $gainsboroParagraph;
+            width: 20%;
+            height: 1px;
+          }
+        }
+      }
+      form {
+        background-color: transparent;
+        border-bottom: 1px solid $platinum;
+        margin-top: 80px;
+        input {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: $gainsboroParagraph;
+          width: 90%;
+        }
+        button {
+          border: none;
+          float: right;
+          background-color: transparent;
+          i {
+            color: $harvestGold;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==============Responsive classes============== */
+/* Responsive: start 320px end: 1368px  */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .blog-details .post-details .blog-information .check-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+}

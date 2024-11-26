@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tector</title>
+    <!-- fav icon link -->
+    <link
+      rel="shortcut icon"
+      href="images/fav-icon/icon.png"
+      type="image/x-icon"
+    />
+    <!-- font awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Map API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZGR13cjZVJxyCDnxS7Bx9qf1SXf56I2I&callback=initMap"
+      defer
+    ></script>
+    <!-- Link slick slider CSS -->
+    <link rel="stylesheet" href="../Main file/ideapage.css" />
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- textillate-master -->
+    <link
+      rel="stylesheet"
+      href="plugins/textillate-master/assets/animate.css"
+    />
+    <!-- <link rel="stylesheet" href="plugins/textillate-master/assets/style.css"> -->
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <!-- =====header section===== -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <div class="brand-logo">
+            <a class="navbar-brand" href="index.html"
+              ><img src="images/birfikrimvar.webp" class="img-fluid" alt="logo"
+            /></a>
+          </div>
+          <button
+            class="navbarToggler navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="navigation-link collapse navbar-collapse gap-4"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-normal hover-style"
+                  href="index.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>Anasayfa</span><i class="bi bi-plus"></i>
+                </a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-normal hover-style"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>Servisler</span><i class="bi bi-plus"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-normal hover-style"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>Takım</span><i class="bi bi-plus"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fw-normal hover-style"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span>Yenilikler</span><i class="bi bi-plus"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-normal" href="contact.html"
+                  ><span>İletişim</span></a
+                >
+              </li>
+            </ul>
+            <div
+              class="getStart-sideMenu d-flex align-items-center align-content-center justify-content-center justify-content-md-between gap-2"
+            >
+              <div
+                class="main-btn d-flex align-items-center ms-sm-0 ms-lg-auto ms-xl-auto ms-xxl-auto"
+                role="search"
+              >
+                <a href="#" id="basvurButton"
+                  >Başvur<i class="bi bi-arrow-up-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- =====main section===== -->
+    <main class="home-one">
+      <!-- ====Banner Section==== -->
+      <div data-aos="fade-up" data-aos-duration="3000">
+        <div class="banner">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-5 align-items-center">
+              <div class="col">
+                <div class="semi-title">Başarıyı İnşa Etmek İçin Buradayız</div>
+                <div class="title py-4">
+                  <h1>
+                    <span class="tlt">Fikirlerinizi Hayata Geçirin</span>
+                  </h1>
+                </div>
+                <p>
+                  Bir iş fikriniz veya hayaliniz varsa, bunu hayata geçirmek
+                  için doğru insanlarla çalışmak çok önemlidir. Doğru ortaklar,
+                  sizinle aynı vizyonu paylaşan ve eksik olduğunuz alanlarda
+                  size destek sağlayabilecek kişilerdir. Ayrıca, işinizi
+                  büyütmek ve fikrinizi gerçeğe dönüştürmek için finansal destek
+                  sunacak, vizyonunuza inanacak doğru yatırımcıları bulmak da
+                  sürecin hayati bir parçasıdır. Bu kişiler, sadece sermaye
+                  sağlamakla kalmaz, aynı zamanda işinizin stratejik bir şekilde
+                  ilerlemesi için rehberlik edebilir ve önemli bağlantılar
+                  kurmanıza yardımcı olabilir.
+                </p>
+
+                <div class="circle-airplane-part">
+                  <div class="animated-circle bannerOne">
+                    <div class="text">
+                      <p>Bir Fikriniz Varsa Bize Ulaşın</p>
+                    </div>
+                    <button class="basvur-button" id="iconButton" type="button">
+                      Başvur
+                    </button>
+                  </div>
+
+                  <!-- <div class="animated-circle">
+                                    <div class="text">
+                                        <p>Business Services Agency. Business Tools.</p>
+                                    </div>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </div> -->
+                  <div class="airplane">
+                    <img
+                      class="img-fluid"
+                      src="images/01_home/banner/airplane.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="banner-images">
+                  <div class="img-1">
+                    <img
+                      class="img-fluid"
+                      src="images/01_home/banner/image-1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="img-2">
+                    <img
+                      class="img-fluid"
+                      src="images/01_home/banner/image-2.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="img-3">
+                    <img
+                      class="img-fluid"
+                      src="images/01_home/banner/image-3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="img-4">
+                    <img
+                      class="img-fluid"
+                      src="images/01_home/banner/image-4.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====Agency List section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="agency-list">
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Geleceği birlikte inşa edelim
+                </p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> Fikirler burada buluşuyor</p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Hayalleriniz gerçeğe dönüşsün
+                </p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Yaratıcılığın sınırlarını zorla
+                </p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> İş birliği, yeni başlangıçlar
+                </p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Birlikte düşün, birlikte üret
+                </p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Fikirden projeye, projeden
+                  başarıya
+                </p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> Değişim buradan başlıyor</p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Ortak akıl, büyük başarılar
+                </p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> İlham al, ilham ver</p>
+              </div>
+              <div class="slide">
+                <p>
+                  <i class="bi bi-asterisk"></i> Fikirler birleşir, projeler
+                  yükselir
+                </p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> Hayal et, paylaş, başlat</p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> Birlikte büyüyen fikirler</p>
+              </div>
+              <div class="slide">
+                <p><i class="bi bi-asterisk"></i> İnovasyonun adresi burası</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Service section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="service">
+          <div class="container">
+            <div class="section-header-and-visit-link">
+              <div class="header">
+                <div class="semi-title">Nasıl Çalışır?</div>
+                <div class="title">
+                  <h2 class="tlt">Fikirden Başarıya Giden Yol</h2>
+                </div>
+              </div>
+            </div>
+            <div
+              class="service-card row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4"
+            >
+              <div class="col">
+                <div class="card h-100">
+                  <div class="number">
+                    <h3>01</h3>
+                  </div>
+                  <img
+                    src="images/multiple-use/service/idea.gif"
+                    class="card-img-top img-fluid"
+                    alt="fikrinizi paylaşın"
+                  />
+                  <div class="card-body">
+                    <a href="service-details.html">
+                      <h4 class="card-title">Fikrinizi Paylaşın</h4>
+                      <span><i class="bi bi-dash-lg"></i></span>
+                    </a>
+                    <p class="card-text">
+                      Yenilikçi fikrinizi platformumuzda paylaşın ve geri
+                      bildirim alın.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <div class="number">
+                    <h3>02</h3>
+                  </div>
+                  <img
+                    src="images/multiple-use/service/design.gif"
+                    class="card-img-top img-fluid"
+                    alt="ortak bulun"
+                  />
+                  <div class="card-body">
+                    <a href="service-details.html">
+                      <h4 class="card-title">Ortak Bulun</h4>
+                      <span><i class="bi bi-dash-lg"></i></span>
+                    </a>
+                    <p class="card-text">
+                      Fikrinizi gerçeğe dönüştürmek için doğru ortakları
+                      keşfedin.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <div class="number">
+                    <h3>03</h3>
+                  </div>
+                  <img
+                    src="images/multiple-use/service/analytics.gif"
+                    class="card-img-top img-fluid"
+                    alt="yatırım alın"
+                  />
+                  <div class="card-body">
+                    <a href="service-details.html">
+                      <h4 class="card-title">Yatırım Alın</h4>
+                      <span><i class="bi bi-dash-lg"></i></span>
+                    </a>
+                    <p class="card-text">
+                      Projeniz için gerekli finansmanı sağlayacak yatırımcılarla
+                      tanışın.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <div class="number">
+                    <h3>04</h3>
+                  </div>
+                  <img
+                    src="images/multiple-use/service/mobile-apps.gif"
+                    class="card-img-top img-fluid"
+                    alt="başarıya ulaşın"
+                  />
+                  <div class="card-body">
+                    <a href="service-details.html">
+                      <h4 class="card-title">Başarıya Ulaşın</h4>
+                      <span><i class="bi bi-dash-lg"></i></span>
+                    </a>
+                    <p class="card-text">
+                      Fikrinizi büyütün ve başarı hikayenizi oluşturun.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Video Play Section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="video-part">
+          <h5 class="d-none">Video</h5>
+          <div class="video-container">
+            <video id="myVideo" poster="videos/cover-photo.png">
+              <source src="videos/video.mp4" type="video/mp4" />
+            </video>
+            <div class="play-button" id="playButton">PLAY</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Company awards & achievements section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="awards-and-achievements">
+          <div class="container">
+            <div class="section-header-and-visit-link">
+              <div class="header">
+                <div class="semi-title">Başarmanın Yol Haritası</div>
+                <div class="title">
+                  <h2>
+                    <span class="cssanimation leFadeInRight sequence"
+                      >Başarıya Giden Yolun Temel
+                    </span>
+                    <br />
+                    <span class="cssanimation leFadeInRight sequence"
+                      >Prensipleri</span
+                    >
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div
+              class="view-details-link row row-cols-1 row-cols-md-2 g-lg-5 g-md-5"
+            >
+              <div class="col">
+                <ul>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>01</span>
+                      <a href="#">
+                        <h5>Hayal Et</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/idea.gif"
+                            alt="hatal et"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>02</span>
+                      <a href="#">
+                        <h5>Araştır ve Öğren</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/mobile-apps.gif"
+                            alt="araştır ve öğren"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>03</span>
+                      <a href="#">
+                        <h5>Planla</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/design.gif"
+                            alt="planla"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>04</span>
+                      <a href="#">
+                        <h5>İş Birliği Yap</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/analytics.gif"
+                            alt="iş birliği yap"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <hr class="four-line" />
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>05</span>
+                      <a href="#">
+                        <h5>Cesur Ol</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/mobile-apps.gif"
+                            alt="cesur ol"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>06</span>
+                      <a href="#">
+                        <h5>Odaklan</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/idea.gif"
+                            alt="odaklan"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>07</span>
+                      <a href="#">
+                        <h5>Paylaş ve Geliştir</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/web-development.gif"
+                            alt="paylaş ve geliştir"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <hr />
+                    <div class="single-link">
+                      <span>08</span>
+                      <a href="#">
+                        <h5>Kutla ve İlham Ver</h5>
+                        <div class="link-images">
+                          <img
+                            src="images/multiple-use/service/marketing.gif"
+                            alt="kutla ve ilham ver"
+                            class="img-fluid"
+                          />
+                        </div>
+                        <i class="bi bi-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <hr />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Check Our Amazing Work section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="amazing-work">
+          <div class="container">
+            <div class="section-header-and-visit-link">
+              <div class="header">
+                <div class="semi-title">Projemiz</div>
+                <div class="title">
+                  <p class="fs-3 fw-bold">
+                    <span class="tlt">Yaptığımız Çalışmaları Kontrol Edin</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel">
+              <div class="list">
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/1.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Innovative Design Solutions</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/2.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Cutting-Edge Technologies</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/3.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Stunning Visuals</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/4.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">User-Friendly Interfaces</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/5.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Seamless User Experience</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/6.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Mobile-Optimized Designs</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/7.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Engaging Interactions</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/8.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Custom-Built Features</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img
+                    src="images/01_home/amazing-work/9.jpg"
+                    alt="img"
+                    class="img-fluid"
+                  />
+                  <div class="content">
+                    <div class="title">
+                      <a href="projects-details.html">
+                        <p class="fs-4 fw-bold">Award-Winning Projects</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnail">
+                <div class="item">
+                  <a href="#">
+                    <img
+                      src="images/01_home/amazing-work/1.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/2.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/3.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/4.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/5.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/6.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/7.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/8.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#"
+                    ><img
+                      src="images/01_home/amazing-work/9.jpg"
+                      alt="img"
+                      class="img-fluid"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="arrows">
+                <button id="prev">
+                  <i class="bi bi-arrow-left-short"></i>
+                </button>
+                <button id="next">
+                  <i class="bi bi-arrow-right-short"></i>
+                </button>
+              </div>
+              <div class="time"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====Price section===== -->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="price">
+          <div class="container">
+            <div
+              class="row row-cols-1 row-cols-md-2 align-content-center align-items-center faq-page-price g-3"
+            >
+              <div class="col faq-page">
+                <div class="section-header-and-visit-link">
+                  <div class="header">
+                    <div class="semi-title">Satış Yönetimi</div>
+                    <div class="title">
+                      <p class="fs-3 fw-bold">
+                        <span class="tlt">Sıkça Sorulan Sorular</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <p class="accordion-header fs-4 fw-bold">
+                      <button
+                        class="accordion-button ps-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Bu platformda nasıl bir proje başlatabilirim?
+                      </button>
+                    </p>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Üye olduktan sonra profilinizi tamamlayarak “Başvur”
+                        sekmesine tıklayın. Projenizin amacını, hedef kitlesini
+                        ve ihtiyaçlarınızı açık bir şekilde tanımlayın. Diğer
+                        kullanıcılar projenizi inceleyerek destek verebilir veya
+                        ortaklık teklifinde bulunabilir.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header fs-4 fw-bold">
+                      <button
+                        class="accordion-button collapsed ps-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Hangi tür projeler platformda destek bulabilir?
+                      </button>
+                    </p>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Teknoloji, sanat, eğitim, çevre, girişimcilik gibi her
+                        alanda projeler platformumuzda yer alabilir. Önemli
+                        olan, projenizin açık, yenilikçi ve iş birliğine uygun
+                        olmasıdır.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header fs-4 fw-bold">
+                      <button
+                        class="accordion-button collapsed ps-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Platformu kullanmak ücretli mi?
+                      </button>
+                    </p>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Hayır, platformumuzu kullanmak ücretsizdir. Ancak bazı
+                        premium özelliklerden yararlanmak isterseniz ücretli
+                        planlarımızdan birini tercih edebilirsiniz.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header fs-4 fw-bold">
+                      <button
+                        class="accordion-button collapsed ps-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        Hangi aşamadaki projeler platforma uygundur?
+                      </button>
+                    </p>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Platformumuz, fikir aşamasından tamamlanmış projelere
+                        kadar her seviyedeki projeyi destekler. Önemli olan,
+                        açık bir vizyona ve iş birliği ruhuna sahip olmanızdır.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <p class="accordion-header fs-4 fw-bold">
+                      <button
+                        class="accordion-button collapsed ps-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        Projem için finansal kaynak bulamazsam ne gibi
+                        alternatiflerim var?
+                      </button>
+                    </p>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Finansal destek bulamıyorsanız, proje için gereken
+                        kaynakları topluluk katkılarıyla karşılamayı
+                        düşünebilirsiniz. Platformumuz, kitle fonlaması
+                        kampanyaları oluşturmanıza ve küçük desteklerle
+                        projenizi başlatmanıza olanak tanır.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col price">
+                <div class="monthly">
+                  <div class="value">En iyi Fiyat</div>
+                  <div
+                    class="d-flex align-content-center align-items-center gap-4 mt-4"
+                  >
+                    <div class="check-logo"><i class="bi bi-check"></i></div>
+                    <div class="information">
+                      <div class="d-flex justify-content-between mb-3">
+                        <div class="time">Aylık</div>
+                        <div class="rate">₺49.<small>99</small></div>
+                      </div>
+                      <p class="fs-4 fw-bold">15 Gün Ücretsiz</p>
+                      <p>
+                        Bugün Bir Fikrim Var'ı kullanmaya başlayın ve 15 günlük
+                        ücretsiz deneme süresinin keyfini çıkarın!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="yearly">
+                  <div class="value">Best Value</div>
+                  <div
+                    class="d-flex align-content-center align-items-center gap-4 mt-4"
+                  >
+                    <div class="check-logo"><i class="bi bi-check"></i></div>
+                    <div class="information">
+                      <div class="d-flex justify-content-between mb-3">
+                        <div class="time">Yıllık</div>
+                        <div class="rate">₺250.<small>99</small></div>
+                      </div>
+                      <p class="fs-4 fw-bold">30 Gün Ücretsiz</p>
+                      <p>
+                        Bugün Bir Fikrim Var'ı kullanmaya başlayın ve 30 günlük
+                        ücretsiz denemenin keyfini çıkarın!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Meet Our Professional section=====-->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="professional">
+          <div class="container">
+            <div class="section-header">
+              <div class="header text-center">
+                <div class="semi-title">Ekibimiz</div>
+                <div class="title">
+                  <p class="fs-3 fw-bold">
+                    <span class="tlt">Ekibimizle Tanışın</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 team-row"
+            >
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img
+                    src="images/Denizkan bey.png"
+                    class="card-img-top img-fluid"
+                    alt="Denizkan Erdoğan"
+                  />
+                  <div class="card-body">
+                    <ul class="social-links professional-hideLink">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-vimeo-v"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <button class="share-btn border-0 share-button">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="info mt-1 px-2 py-3">
+                      <a href="team-details.html">
+                        <h5 class="card-title tow text-white ps-2 m-0">
+                          Denizkan Erdoğan
+                        </h5>
+                      </a>
+                      <p class="card-text text-white ps-2">CEO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img
+                    src="images/Onur Alp bey.png"
+                    class="card-img-top img-fluid"
+                    alt="Onur Alp Erdoğan"
+                  />
+                  <div class="card-body">
+                    <ul class="social-links professional-hideLink">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-vimeo-v"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <button class="share-btn border-0 share-button">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="info mt-1 px-2 py-3">
+                      <a href="team-details.html">
+                        <h5 class="card-title tow text-white ps-2 m-0">
+                          Onur Alp Erdoğan
+                        </h5>
+                      </a>
+                      <p class="card-text text-white ps-2">COO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img
+                    src="images/gözde hanım.png "
+                    class="card-img-top img-fluid"
+                    alt="Gözde Kurtoğlu"
+                  />
+                  <div class="card-body">
+                    <ul class="social-links professional-hideLink">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-vimeo-v"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <button class="share-btn border-0 share-button">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="info mt-1 px-2 py-3">
+                      <a href="team-details.html">
+                        <h5 class="card-title tow text-white ps-2 m-0">
+                          Gözde Kurtoğlu
+                        </h5>
+                      </a>
+                      <p class="card-text text-white ps-3">Proje Yöneticisi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0">
+                  <img
+                    src="images/Fatih bey.png"
+                    class="card-img-top img-fluid"
+                    alt="Fatih Yılmaz"
+                  />
+                  <div class="card-body">
+                    <ul class="social-links professional-hideLink">
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-facebook-f"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-vimeo-v"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                          ><i class="fa-brands fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <button class="share-btn border-0 share-button">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="info mt-1 px-2 py-3">
+                      <a href="team-details.html">
+                        <h5 class="card-title tow text-white ps-2 m-0">
+                          Fatih Yılmaz
+                        </h5>
+                      </a>
+                      <p class="card-text text-white ps-3">Yazılım Mühendisi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====Read Our Latest Articles section=====-->
+      <section data-aos="fade-up" data-aos-duration="3000">
+        <div class="latest-articles">
+          <div class="container">
+            <div class="section-header">
+              <div class="header">
+                <div class="semi-title ps-3">Fikirlerinizin Gücü</div>
+                <div class="title ps-3">
+                  <p class="fs-3 fw-bold">
+                    <span
+                      >Yöneticilerimizin ve Çalışanlarımızın Başarı Hikayelerini
+                      Keşfedin.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4"
+            >
+              <div class="col">
+                <div class="card h-100 border-0 p-3">
+                  <p class="fs-4 fw-bolder w-100 h-50">
+                    Fikirler dünyayı değiştirebilir. Doğru bir planla her şey
+                    mümkün.”
+                  </p>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <div class="finance">CEO</div>
+                    </div>
+                    <a href="blog.html">
+                      <h4 class="card-title mt-3">Denizkan Erdoğan</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 p-3">
+                  <p class="fs-4 fw-bolder w-100 h-50">
+                    “Her büyük başarı, küçük bir fikirle başlar. Cesaretle
+                    ilerleyin.”
+                  </p>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <div class="finance">COO</div>
+                    </div>
+                    <a href="blog.html">
+                      <h4 class="card-title mt-3">Onur Alp Erdoğan</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 border-0 p-3">
+                  <p class="fs-4 fw-bolder w-100 h-50">
+                    “Başarıya giden yol, sabır ve azimle doludur. Fikrinizden
+                    vazgeçmeyin.”
+                  </p>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <div class="finance">Proje Yöneticisi</div>
+                    </div>
+                    <a href="blog.html">
+                      <h4 class="card-title mt-3">Gözde Kurtoğlu</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="basvurModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="https://www.eterna.net.tr/form/5" frameborder="0"></iframe>
+      </div>
+    </div>
+    <!-- =====Footer section===== -->
+    <footer class="">
+      <div class="container">
+        <div class="footer-details row">
+          <div class="information col-sm-12 col-md-12 col-lg-9">
+            <div
+              class="row row-cols-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 g-4 our-details justify-content-around"
+            >
+              <div class="col">
+                <div
+                  class="card h-100 bg-transparent border-0 footer-image-col"
+                >
+                  <a href="index.html">
+                    <img
+                      src="images/birfikrimvar.webp"
+                      class="card-img-top img-fluid footer-image"
+                      alt="bir fikrim var"
+                    />
+                  </a>
+                  <div class="card-body px-0 py-3">
+                    <p class="card-text text-white fw-bolder fs-5">
+                      Hizmetlerimizi kullanarak
+                      <span>topluluğumuza katılın.</span>
+                    </p>
+                    <div class="social-info mt-4">
+                      <ul class="d-flex gap-3">
+                        <li>
+                          <a class="text-white" href="#"
+                            ><i class="link-icons fa-brands fa-facebook-f"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="text-white" href="#"
+                            ><i class="link-icons fa-brands fa-twitter"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="text-white" href="#"
+                            ><i class="link-icons fa-brands fa-vine"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="text-white" href="#"
+                            ><i class="link-icons fa-brands fa-instagram"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 bg-transparent border-0">
+                  <div class="touch-info">
+                    <div class="position-relative">
+                      <div class="divide-column position-absolute"></div>
+                      <h4 class="text-white">İletişime Geçin</h4>
+                    </div>
+                    <ul class="d-flex flex-column mt-3 row-gap-2">
+                      <li class="text-white mb-2">
+                        Atatürk Caddesi, No:1, 34000 İstanbul, Türkiye
+                      </li>
+                      <li>
+                        <a class="text-white" href="tel:+1999806915">
+                          <i class="bi bi-telephone phone"></i>
+                          00 (123) 456 78 90
+                        </a>
+                      </li>
+                      <li>
+                        <a class="text-white" href="mailto:shifamoni@gmail.com">
+                          <i class="bi bi-envelope email"></i>
+                          info@birfikrimvar.com
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="copy-right-email-field d-flex align-items-center">
+              <div class="text-white copy-right">
+                © 2024 Bir Fikrim Var. Bütün hakları saklıdır.
+              </div>
+              <div class="email-field">
+                <form action="#">
+                  <input
+                    type="email"
+                    name="footerEmail"
+                    id="footerEmail"
+                    required
+                    placeholder="Email adresinizi giriniz"
+                  />
+                  <button>
+                    <img
+                      src="images/multiple-use/sms/paper-plane.gif"
+                      alt="paper-plane"
+                    />
+                  </button>
+                </form>
+              </div>
+              <div></div>
+            </div>
+          </div>
+          <div class="photo-circle col-sm-12 col-md-12 col-lg-3">
+            <div class="animated-circle footer">
+              <div class="text">
+                <p>
+                  Bir &nbsp;Fikrim &nbsp;var. &nbsp;Bir &nbsp;Fikrim &nbsp;Var.
+                </p>
+              </div>
+              <i class="bi bi-arrow-up-right"></i>
+            </div>
+            <img
+              src="images/footer-person.png"
+              alt="footer-person"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="progress">
+        <span id="progress-value">&#x2191;</span>
+      </div>
+    </footer>
+
+    <!-- jQuery js -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- AOS animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- font awesome -->
+    <script src="js/all.min.js"></script>
+    <!-- slick slider JS -->
+    <script src="plugins/slick/slick.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- textillate-master -->
+    <script src="plugins/textillate-master/assets/jquery.fittext.js"></script>
+    <script src="plugins/textillate-master/assets/jquery.lettering.js"></script>
+    <script src="plugins/textillate-master/assets/jquery.textillate.js"></script>
+    <!-- custom js -->
+    <script src="js/app.js"></script>
+    <!-- JavaScript kodunu gncelleyelim - en sondaki script taglerinden hemen önce ekleyin -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tüm gerekli elementleri seçelim
+        const modal = document.getElementById("basvurModal");
+        const basvurBtn = document.getElementById("basvurButton");
+        const iconBtn = document.getElementById("iconButton");
+        const span = document.getElementsByClassName("close")[0];
+
+        // İkon butonuna tıklama olayı
+        if (iconBtn) {
+          iconBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("İkon butonuna tıklandı"); // Test için
+            openModal();
+          });
+        } else {
+          console.log("İkon butonu bulunamadı"); // Hata tespiti için
+        }
+
+        // Başvur butonuna tıklama olayı
+        if (basvurBtn) {
+          basvurBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openModal();
+          });
+        }
+
+        // Modal açma fonksiyonu
+        function openModal() {
+          modal.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        }
+
+        // Modal kapatma olayları
+        if (span) {
+          span.addEventListener("click", closeModal);
+        }
+
+        window.addEventListener("click", function (event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        });
+
+        // Modal kapatma fonksiyonu
+        function closeModal() {
+          modal.style.opacity = "0";
+          setTimeout(() => {
+            modal.style.display = "none";
+            modal.style.opacity = "1";
+            document.body.style.overflow = "auto";
+          }, 300);
+        }
+      });
+    </script>
+  </body>
+</html>

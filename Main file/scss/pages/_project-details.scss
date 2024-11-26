@@ -1,0 +1,175 @@
+.project-details {
+  // =====Banner section=====
+  .banner {
+    position: relative;
+    img {
+      opacity: 0.4;
+      max-height: 350px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .content {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+  // =====Projects Information=====
+  .projects-information {
+    .photo {
+      img {
+        opacity: 0.4;
+      }
+    }
+    .information {
+      .accordion {
+        border: none;
+      }
+      div#accordionExample {
+        border: none;
+        border-color: red;
+      }
+      .question {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        img {
+          opacity: 0.6;
+        }
+        .accordion-item {
+          background-color: $whiteColor;
+          margin-bottom: 10px;
+          border: none;
+          .accordion-button {
+            background-color: $harvestGold;
+            padding: 5px;
+            &:hover:focus {
+              border: none;
+              outline: none;
+            }
+          }
+          .accordion-body {
+            color: $gainsboroParagraph;
+            background-color: $shadowBlack;
+          }
+          .accordion-button {
+            color: $shadowBlack;
+          }
+          .accordion-button.collapsed {
+            color: $platinum;
+          }
+          .accordion-button:focus {
+            z-index: 3;
+            border-color: var(--bs-accordion-btn-focus-border-color);
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  /* =====Subscribe For The Exclusive Updates section===== */
+  .subscribe-updates {
+    background-color: $smokyBlack;
+    .subscribe.section-header {
+      margin-bottom: 0px;
+    }
+    .subscribe-email-field {
+      form {
+        input {
+          width: 75%;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          border-bottom: 1px solid rgba($gainsboroParagraph, 0.2);
+          padding: 10px 10px 10px 1px;
+        }
+        button {
+          margin-left: 10px;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          img {
+            width: 40px;
+          }
+          .subscribe-icons {
+            color: $harvestGold;
+          }
+        }
+      }
+      .police {
+        color: $platinum;
+        input {
+          border: 1px solid $harvestGold;
+          background-color: transparent;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+          &:focus {
+            -webkit-box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+            box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+          }
+        }
+        span {
+          a {
+            color: $platinum;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==============Responsive classes============== */
+/* Responsive: start 320px end: 1368px  */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .projects-grid .banner .home-about-link ul {
+    padding: 12px 22px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .banner .images-optimization .cover-images-overlay {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .banner .images-optimization .cover-images-overlay {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .projects-grid .banner .images-optimization img {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .projects-grid .banner .images-optimization img {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+}

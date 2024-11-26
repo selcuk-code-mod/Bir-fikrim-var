@@ -1,0 +1,332 @@
+footer {
+  background-image: url("../../images/multiple-use/footer/footer-bg.png");
+  .footer-details {
+    .information {
+      padding: 60px 0px 30px 0px;
+      .subscribe-field {
+        background-color: rebeccapurple;
+        padding: 30px 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        form {
+          background-color: rosybrown;
+          border-radius: 10px;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          max-width: 80%;
+          margin-left: auto;
+          input {
+            background-color: royalblue;
+            border: 0;
+            outline: none;
+            padding: 10px 20px;
+            width: 70%;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 5px;
+            color: $whiteColor;
+          }
+          .subscript {
+            background-color: mediumblue;
+            border: none;
+            outline: none;
+            width: 30%;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 0px 5px 5px 0px;
+            color: $whiteColor;
+            font-size: 16px;
+            -webkit-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s;
+            overflow: hidden;
+            margin-left: -3px;
+            &:hover {
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+              color: tan;
+            }
+          }
+        }
+      }
+      .link,
+      .touch-info {
+        ul {
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .our-details {
+        .card {
+          img {
+            width: 60%;
+          }
+          .card-body {
+            p {
+              font-size: 15px;
+              line-height: 28px;
+            }
+          }
+          .link {
+            ul {
+              li {
+                a {
+                  position: relative;
+                  &::after {
+                    border-bottom: 1px solid $harvestGold;
+                    content: "";
+                    position: absolute;
+                    width: 0%;
+                    bottom: 0;
+                    left: 0;
+                    -webkit-transition: 2s;
+                    -o-transition: 2s;
+                    transition: 2s;
+                  }
+                  &:hover::after {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+          .social-info {
+            ul {
+              li {
+                a {
+                  .link-icons {
+                    border: 1px dotted $harvestGold;
+                    width: 15px;
+                    height: 15px;
+                    padding: 5px;
+                    -webkit-transition: 0.5s;
+                    -o-transition: 0.5s;
+                    transition: 0.5s;
+                  }
+                  &:hover .link-icons {
+                    background-color: $shadowBlack;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .copy-right-email-field {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 40px;
+        .copy-right {
+          span {
+            color: $platinum;
+          }
+          span {
+            a {
+              color: $harvestGold;
+            }
+          }
+        }
+        .email-field {
+          background-color: $shadowBlack;
+          margin-left: auto;
+          form {
+            padding: 0px 10px;
+            #footerEmail {
+              background: transparent;
+              outline: none;
+              border: none;
+              padding: 10px;
+              color: $gainsboroParagraph;
+            }
+            button {
+              border: none;
+              background-color: transparent;
+              img {
+                width: 30px;
+              }
+            }
+          }
+        }
+        .to-top.active {
+          opacity: 1;
+          bottom: 2rem;
+          pointer-events: auto;
+        }
+      }
+    }
+    .photo-circle {
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      .circle-footer {
+        background-color: rgba($harvestGold, 0.4);
+        border: none;
+        position: absolute;
+        right: 34px;
+        top: 50px;
+      }
+    }
+  }
+}
+
+/* ==============Responsive classes============== */
+/* Responsive: start 320px end: 1368px  */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  footer .footer-details {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  footer .footer-details .subscribe-field form button {
+    width: 30%;
+  }
+  footer .footer-details .our-details .card img {
+    width: 40%;
+  }
+  footer {
+    margin-top: 50px;
+    padding: 30px 0;
+  }
+  footer .footer-details .subscribe-field form {
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+  }
+  footer .footer-details .subscribe-field form input {
+    border: 0;
+    padding: 10px 10px;
+    width: 80%;
+    height: 50px;
+    font-size: 14px;
+  }
+  footer .footer-details .subscribe-field form button {
+    width: 30%;
+  }
+  footer .footer-details .copy-right-email-field .copy-right-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+  }
+  footer .footer-details .our-details {
+    padding: 35px 0px;
+  }
+  footer .footer-details .information .copy-right-email-field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  footer .footer-details .information .copy-right-email-field .email-field {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  footer {
+    padding: 50px 0px;
+  }
+  footer .footer-details .our-details .card img {
+    width: 50%;
+  }
+  footer .footer-details .subscribe-field {
+    padding: 30px 0px;
+    text-align: center;
+  }
+  footer .footer-details .subscribe-field form {
+    width: 100%;
+  }
+  footer .footer-details .subscribe-field form {
+    width: 100%;
+    margin: 0 auto;
+  }
+  footer .footer-details .copy-right-email-field .copy-right-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+  }
+  footer .footer-details .our-details {
+    padding: 35px 0px;
+  }
+  footer .footer-details {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  footer {
+    padding: 60px 0px 0px 0px;
+  }
+  footer .footer-details .subscribe-field {
+    padding: 30px 0px;
+    text-align: center;
+  }
+  footer .footer-details .subscribe-field form input {
+    width: 60%;
+  }
+
+  footer .footer-details .subscribe-field form {
+    margin: 0 auto;
+  }
+  footer .footer-details {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  footer .footer-details .photo-circle {
+    position: relative;
+    width: 100%;
+  }
+  footer .footer-details .information {
+    padding: 60px 0px 30px 0px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+}

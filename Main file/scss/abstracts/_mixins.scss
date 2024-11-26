@@ -1,0 +1,6 @@
+@mixin square-style {
+  content: "";
+  background-color: $secondaryColor;
+  width: 10px;
+  height: 10px;
+}

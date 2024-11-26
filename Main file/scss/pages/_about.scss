@@ -1,0 +1,597 @@
+.about {
+  /* =====Banner section===== */
+  .banner {
+    position: relative;
+    img {
+      opacity: 0.4;
+      max-height: 350px;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .content {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+  }
+
+  /* =====Refreshingly Unique Giving Your Business Company===== */
+  .business-company {
+    .business-images-circle {
+      .all-images {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 2fr 10px 1fr;
+        grid-template-columns: repeat(1, 2fr 1fr);
+        gap: 10px;
+        position: relative;
+        .images {
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          overflow: hidden;
+          img {
+            -webkit-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+            overflow: hidden;
+          }
+          &:hover img {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+        .images.two {
+          position: absolute;
+          top: 20px;
+        }
+        .images.three {
+          position: absolute;
+          right: 0;
+          bottom: 20px;
+        }
+      }
+      .animated-circle.about {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-150%, -50%);
+        -ms-transform: translate(-150%, -50%);
+        transform: translate(-150%, -50%);
+        border: none;
+        background-color: $harvestGold;
+      }
+    }
+    .award-success {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 20px;
+      .award {
+        background-color: $smokyBlack;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        #award-number {
+          font-size: 48px;
+          letter-spacing: 10px;
+          color: $platinum;
+          font-weight: 700;
+        }
+        img {
+          width: 60px;
+        }
+      }
+      .success {
+        -webkit-box-flex: 2;
+        -ms-flex: 2;
+        flex: 2;
+        color: $platinum;
+        background-color: $shadowBlack;
+        position: relative;
+        padding: 10px;
+        border-radius: 5px;
+        .rating-box {
+          width: 100%;
+          margin: 25px 0px;
+          .title {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+          }
+          .rating-bar {
+            height: 8px;
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 6px;
+            background-color: $smokyBlack;
+            .rating-per {
+              position: relative;
+              display: block;
+              height: 100%;
+              width: 90%;
+              border-radius: 6px;
+              background-color: $harvestGold;
+              -webkit-animation: progress 7s ease-in-out forwards;
+              animation: progress 7s ease-in-out forwards;
+              opacity: 0;
+              @-webkit-keyframes progress {
+                0% {
+                  width: 0;
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
+              @keyframes progress {
+                0% {
+                  width: 0;
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
+              .toolTip {
+                background-color: $harvestGold;
+                position: absolute;
+                right: -14px;
+                top: -28px;
+                font-size: 10px;
+                padding: 2px 6px;
+                border-radius: 3px;
+                z-index: 1;
+                &::before {
+                  position: absolute;
+                  content: "";
+                  width: 10px;
+                  height: 10px;
+                  z-index: -1;
+                  left: 50%;
+                  bottom: -2px;
+                  background-color: $harvestGold;
+                  -webkit-transform: translateX(-50%) rotate(45deg);
+                  -ms-transform: translateX(-50%) rotate(45deg);
+                  transform: translateX(-50%) rotate(45deg);
+                }
+              }
+            }
+            .rating-per.happy {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*=====Project Award Customer team=====*/
+  .project-award-customer-team {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .project-counting,
+    .award-counting,
+    .customer-counting,
+    .team-counting {
+      border: 1px dashed rgba($shadowBlack, 0.8);
+      border-radius: 50%;
+      margin: 0 -10px;
+      text-align: center;
+      -webkit-transition: 2s;
+      -o-transition: 2s;
+      transition: 2s;
+      overflow: hidden;
+      padding: 40px;
+      .counting {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 20px;
+      }
+      &:hover {
+        border: 1px dashed $harvestGold;
+      }
+      .text {
+        font-size: 80px;
+        font-weight: bold;
+        color: transparent;
+        -webkit-text-stroke: 2px $harvestGold;
+        text-stroke: 2px $harvestGold;
+        ::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  /*=====TRUSTED BY THE WORLD'S BEST ORGANIZATIONS=====*/
+  .best-organization {
+    position: relative;
+    img {
+      opacity: 0.5;
+      width: 100%;
+      max-height: 400px;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+    .windowVideoPopupModal {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      .content {
+        background-color: rgba($harvestGold, 0.4);
+        padding: 40px;
+      }
+    }
+  }
+  /*=====Price section=====*/
+  .price {
+    .faq-page-price {
+      margin: 50px 0px;
+      h2 {
+        margin-bottom: 40px;
+      }
+      .faq-page {
+        .accordion-item {
+          background-color: transparent;
+          margin-bottom: 10px;
+          border: none;
+          .accordion-button {
+            background-color: transparent;
+            &:hover:focus {
+              border: none;
+              outline: none;
+            }
+          }
+
+          .accordion-button {
+            color: $whiteColor;
+          }
+          .accordion-body {
+            color: $gainsboroParagraph;
+          }
+          .accordion-button.collapsed {
+            color: $harvestGold;
+            ::after {
+              background-color: rebeccapurple;
+              color: $harvestGold;
+            }
+          }
+          .accordion-button:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+          }
+        }
+      }
+      .price {
+        color: $gainsboroParagraph;
+        .monthly,
+        .yearly {
+          background-color: $eerieBlack;
+          padding: 18px;
+          margin-bottom: 40px;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          .value {
+            background-color: $harvestGold;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 4px;
+            border-radius: 2px;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin-right: 0;
+            margin-left: auto;
+            margin-top: -34px;
+            -webkit-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+            border: 1px solid $harvestGold;
+          }
+          .check-logo {
+            background-color: $harvestGold;
+            padding: 5px 10px;
+            border: 1px solid $harvestGold;
+            -webkit-transition: 2s;
+            -o-transition: 2s;
+            transition: 2s;
+          }
+          .information {
+            .time {
+              border: 1px solid $shadowBlack;
+              padding: 4px 8px;
+              -webkit-transition: 2s;
+              -o-transition: 2s;
+              transition: 2s;
+            }
+            .rate {
+              color: $whiteColor;
+              small {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .monthly:hover,
+        .yearly:hover {
+          background-color: $shadowBlack;
+          .value {
+            background-color: transparent;
+          }
+          .information {
+            .time {
+              border: 1px solid $harvestGold;
+            }
+          }
+          .check-logo {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  /* =====Meet Our Professional section=====*/
+  .professional {
+    .card {
+      background-color: transparent;
+      .card-body {
+        margin-top: -150px;
+        .social-links {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+        ul {
+          li {
+            background-color: $whiteColor;
+            width: 26px;
+            height: 26px;
+            margin-bottom: 4px;
+            text-align: center;
+            -webkit-transition: background-color 0.3s ease;
+            -o-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            border-radius: 6px;
+            a {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              color: $harvestGold;
+            }
+            &:hover {
+              background-color: $harvestGold;
+            }
+            &:hover a {
+              color: $whiteColor;
+            }
+          }
+        }
+        .share-btn {
+          color: $whiteColor;
+          background-color: $harvestGold;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          text-align: center;
+          margin: -16px auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          z-index: 2;
+          position: relative;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+        }
+
+        .info {
+          background-color: $shadowBlack;
+          color: $whiteColor;
+          -webkit-transition: 2s;
+          -o-transition: 2s;
+          transition: 2s;
+          text-align: center;
+          border-bottom: 1px solid $harvestGold;
+        }
+
+        &:hover .info {
+          background-color: $harvestGold;
+        }
+        &:hover .share-btn {
+          color: $harvestGold;
+          background-color: $whiteColor;
+        }
+      }
+    }
+  }
+  /* =====Subscribe For The Exclusive Updates section===== */
+  .subscribe-updates {
+    background-color: $smokyBlack;
+    .subscribe.section-header {
+      margin-bottom: 0px;
+    }
+    .subscribe-email-field {
+      form {
+        input {
+          width: 75%;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          border-bottom: 1px solid rgba($gainsboroParagraph, 0.2);
+          padding: 10px 10px 10px 1px;
+        }
+        button {
+          margin-left: 10px;
+          border: none;
+          background-color: transparent;
+          color: $platinum;
+          img {
+            width: 40px;
+          }
+          .subscribe-icons {
+            color: $harvestGold;
+          }
+        }
+      }
+      .police {
+        color: $platinum;
+        input {
+          border: 1px solid $harvestGold;
+          background-color: transparent;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+          &:focus {
+            -webkit-box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+            box-shadow: 0px 0px 2px 2px rgba($harvestGold, 0.7);
+          }
+        }
+        span {
+          a {
+            color: $platinum;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+/* ==============Responsive classes============== */
+/* Responsive: start 320px end: 1368px  */
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .about .business-images-circle {
+    margin-bottom: 50px;
+  }
+  .about .business-company .business-images-circle .animated-circle.about {
+    display: none;
+  }
+  .about .business-company .award-success .success .rating-box .title {
+    font-size: 12px;
+  }
+  .about .business-company .award-success .award #award-number {
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: 500;
+  }
+  .about .project-award-customer-team {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .about .video-part .play-button {
+    width: 50px;
+    height: 54px;
+    font-size: 14px;
+  }
+  .about .business-images-circle {
+    margin-bottom: 50px;
+  }
+  .about .business-company .business-images-circle .animated-circle.about {
+    display: none;
+  }
+  .about .business-company .award-success {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+  .about .project-award-customer-team {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .about .business-company .award-success .award #award-number {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+  .about .business-company .award-success .success .rating-box .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+}
