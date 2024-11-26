@@ -605,3 +605,123 @@ function updatePagination() {
 }
 // Add event listeners to the pagination links
 paginationLinks.forEach((link) => link.addEventListener("click", activeLink));
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Tüm gerekli elementleri seçelim
+  const modal = document.getElementById("basvurModal");
+  const basvurBtn = document.getElementById("basvurButton");
+  const iconBtn = document.getElementById("iconButton");
+  const span = document.getElementsByClassName("close")[0];
+
+  // İkon butonuna tıklama olayı
+  if (iconBtn) {
+    iconBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("İkon butonuna tıklandı"); // Test için
+      openModal();
+    });
+  } else {
+    console.log("İkon butonu bulunamadı"); // Hata tespiti için
+  }
+
+  // Başvur butonuna tıklama olayı
+  if (basvurBtn) {
+    basvurBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  // Modal açma fonksiyonu
+  function openModal() {
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  // Modal kapatma olayları
+  if (span) {
+    span.addEventListener("click", closeModal);
+  }
+
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      closeModal();
+    }
+  });
+
+  // Modal kapatma fonksiyonu
+  function closeModal() {
+    modal.style.opacity = "0";
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.style.opacity = "1";
+      document.body.style.overflow = "auto";
+    }, 300);
+  }
+});
+
+$(document).ready(function () {
+  $(".team-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 1050,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 430,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});
+
+$(document).ready(function () {
+  // Mevcut team-slider konfigürasyonu...
+
+  // Quotes slider konfigürasyonu
+  $(".quotes-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+});

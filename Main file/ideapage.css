@@ -102,6 +102,82 @@
   margin: 0 10px;
 }
 
+.quotes-slider {
+  padding: 2rem 0;
+}
+
+.quotes-slider .slick-slide {
+  margin: 0 10px;
+}
+
+/* Quotes slider için özel stiller */
+.quotes-slider .card {
+  transition: transform 0.3s ease;
+}
+
+.quotes-slider .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Slick dots stilleri */
+.quotes-slider .slick-dots {
+  bottom: -40px;
+}
+
+.quotes-slider .slick-dots li button:before {
+  font-size: 10px;
+}
+
+/* Slick okları */
+.quotes-slider .slick-prev,
+.quotes-slider .slick-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.quotes-slider .slick-prev {
+  left: -50px;
+}
+
+.quotes-slider .slick-next {
+  right: -50px;
+}
+
+.quotes-slider .slick-prev:before,
+.quotes-slider .slick-next:before {
+  font-size: 20px;
+  opacity: 1;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 992px) {
+  .quotes-slider .slick-prev {
+    left: 10px;
+  }
+
+  .quotes-slider .slick-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .quotes-slider .slick-prev,
+  .quotes-slider .slick-next {
+    display: none !important;
+  }
+}
+/* Tüm ekranlarda okları gizle */
+.quotes-slider .slick-prev,
+.quotes-slider .slick-next {
+  display: none !important;
+}
+.idea {
+  height: 50%;
+}
+
 /* Responsive ayarlar */
 @media (max-width: 992px) {
   .slick-prev {
@@ -156,7 +232,7 @@
 }
 
 .icon-button i {
-  font-size: 24px; /* veya mevcut boyutuna göre ayarlayın */
+  font-size: 24px;
   color: inherit;
   transition: transform 0.3s ease;
 }
@@ -183,17 +259,16 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
-  color: #fff; /* veya mevcut renginiz */
+  color: #fff;
   font-weight: 500;
   position: relative;
   z-index: 10;
-  /* Mevcut başvur butonu ile aynı font */
+
   font-family: "Manrope", sans-serif;
 }
 
-/* Hover efekti - mevcut başvur butonu ile aynı renk */
 .basvur-button:hover {
-  color: #f6ad1c; /* veya mevcut hover renginiz */
+  color: #f6ad1c;
 }
 
 /* Aktif durum */
@@ -208,8 +283,7 @@
 }
 
 .navbar-brand img {
-  max-width: 100px; /* Varsayılan boyut */
-  height: auto;
+  max-width: 100px;
   transition: all 0.3s ease;
 }
 
@@ -239,21 +313,21 @@
 }
 
 .slide p {
-  font-size: 18px; /* Yazı boyutunu küçülttük */
+  font-size: 18px;
   margin: 0;
   padding: 8px 12px;
-  white-space: nowrap; /* Tek satırda gösterim */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Uzun metinler için üç nokta */
+  text-overflow: ellipsis;
   color: inherit;
   display: flex;
   align-items: center;
-  gap: 8px; /* İkon ile yazı arası boşluk */
+  gap: 8px;
   color: #fff;
 }
 
 .slide i {
-  font-size: 12px; /* İkon boyutunu küçülttük */
+  font-size: 12px;
 }
 
 /* Tablet için responsive */
