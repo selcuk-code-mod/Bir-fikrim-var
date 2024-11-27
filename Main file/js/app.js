@@ -678,7 +678,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
