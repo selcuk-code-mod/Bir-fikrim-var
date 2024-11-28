@@ -36,6 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
   playButtons.forEach(function (playButton) {
     var video = playButton.previousElementSibling;
 
+    // Video bittiğinde poster'ı göster
+    video.addEventListener("ended", function () {
+      video.load(); // Video'yu resetle ve poster'ı göster
+      playButton.textContent = "PLAY";
+    });
+
     playButton.addEventListener("click", function () {
       if (video.paused) {
         video.play();

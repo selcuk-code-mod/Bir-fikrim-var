@@ -274,6 +274,27 @@
   max-width: 100px;
   transition: all 0.3s ease;
 }
+.home-one .video-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+}
+
+.home-one .video-part .video-container {
+  position: relative;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home-one .video-part .video-container video {
+  width: 100% !important;
+  max-width: 675px !important;
+  aspect-ratio: 1200 / 1100 !important;
+  border-radius: 4px !important;
+}
 
 /* Tablet boyutu için */
 @media screen and (max-width: 992px) {
