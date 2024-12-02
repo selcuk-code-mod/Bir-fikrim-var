@@ -68,69 +68,52 @@ document.addEventListener("DOMContentLoaded", function () {
   let prevDom = document.getElementById("prev");
 
   let carouselDom = document.querySelector(".carousel");
-  if (!carouselDom) return; // Exit if there is no carousel on the page
+  if (!carouselDom) return; // Eğer carousel yoksa çık
 
   let SliderDom = carouselDom.querySelector(".list");
-  if (!SliderDom) return; // Exit if there is no slider list
+  if (!SliderDom) return; // Eğer slider listesi yoksa çık
 
-  let thumbnailBorderDom = document.querySelector(".thumbnail");
-  if (!thumbnailBorderDom) return; // Exit if there is no thumbnail border
+  let thumbnailItemsDom = SliderDom.querySelectorAll(".item");
+  if (thumbnailItemsDom.length === 0) return; // Eğer thumbnail öğesi yoksa çık
 
-  let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
-  if (thumbnailItemsDom.length === 0) return; // Exit if there are no thumbnail items
+  let currentIndex = 0; // Başlangıçta ilk index
 
-  let timeDom = document.querySelector(".time");
+  // İlk açılışta ilk resmi göster
+  updateSlider();
 
-  thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-  let timeRunning = 3000;
-  let timeAutoNext = 7000;
-
+  // "next" butonuna tıklama olayı
   if (nextDom) {
     nextDom.onclick = function () {
-      showSlider("next");
+      currentIndex = (currentIndex + 1) % thumbnailItemsDom.length; // Sonraki index
+      updateSlider();
     };
   }
 
+  // "prev" butonuna tıklama olayı
   if (prevDom) {
     prevDom.onclick = function () {
-      showSlider("prev");
+      currentIndex = (currentIndex - 1 + thumbnailItemsDom.length) % thumbnailItemsDom.length; // Önceki index
+      updateSlider();
     };
   }
 
-  let runTimeOut;
-  let runNextAuto = setTimeout(() => {
-    if (nextDom) nextDom.click();
-  }, timeAutoNext);
+  function updateSlider() {
+    // Tüm slaytları pasif yap
+    thumbnailItemsDom.forEach(item => {
+      item.classList.remove('active'); // Tüm slaytları pasif yap
+      item.style.opacity = 0; // Opaklığı sıfırla
+    });
 
-  function showSlider(type) {
-    let SliderItemsDom = SliderDom.querySelectorAll(".item");
-    let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
+    // Güncel slaytı ekle
+    let currentSlide = thumbnailItemsDom[currentIndex]; // Aktif slaytı al
+    currentSlide.classList.add('active'); // Aktif slaytı göster
 
-    if (type === "next") {
-      SliderDom.appendChild(SliderItemsDom[0]);
-      thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-      carouselDom.classList.add("next");
-    } else {
-      SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-      thumbnailBorderDom.prepend(
-        thumbnailItemsDom[thumbnailItemsDom.length - 1]
-      );
-      carouselDom.classList.add("prev");
-    }
-
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
-      carouselDom.classList.remove("next");
-      carouselDom.classList.remove("prev");
-    }, timeRunning);
-
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-      if (nextDom) nextDom.click();
-    }, timeAutoNext);
+    // Opaklığı yavaşça artır
+    setTimeout(() => {
+      currentSlide.style.opacity = 1; // Aktif slaytın opaklığını artır
+    }, 50); // Kısa bir gecikme ile opaklığı artır
   }
 });
-
 // =====Meet Our Professional section=====
 var shareButtons = document.querySelectorAll(".share-button");
 var socialLinksList = document.querySelectorAll(".social-links");

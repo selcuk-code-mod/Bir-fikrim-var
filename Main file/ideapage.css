@@ -296,13 +296,20 @@
   border-radius: 4px !important;
 }
 
-/* Tablet boyutu için */
-@media screen and (max-width: 992px) {
-  .navbar-brand img {
-    max-width: 100px;
-  }
+.carousel .list {
+  display: flex; /* Slaytları yan yana dizmek için */
+  transition: transform 0.8s ease; /* Geçiş süresi ve efekti */
 }
 
+.carousel .item {
+  min-width: 100%; /* Her slaytın tam genişlikte görünmesi için */
+  transition: opacity 0.8s ease; /* Opaklık geçişi */
+  opacity: 0; /* Başlangıçta görünmez */
+}
+
+.carousel .item.active {
+  opacity: 1; /* Aktif slayt görünür */
+}
 /* Küçük tablet boyutu için */
 @media screen and (max-width: 768px) {
   .navbar-brand img {
