@@ -60,15 +60,15 @@
 }
 
 .team-slider {
-  padding: 2rem 0;
+  padding: 2rem 0 !important;
 }
 
 .slick-dots {
-  bottom: -40px;
+  bottom: -20px !important;
 }
 
 .slick-dots li button:before {
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 .slick-prev,
@@ -96,7 +96,7 @@
 }
 
 .team-slider .slick-slide {
-  margin: 0 10px;
+  margin: 0 10px !important;
 }
 
 .quotes-slider {
@@ -145,15 +145,138 @@
   font-size: 20px;
   opacity: 1;
 }
+.card-team {
+  background-color: transparent !important;
+}
+.card-team img {
+  z-index: -10 !important;
+}
+.card-team .card-body {
+  margin-top: -100px !important;
+}
+.card-team .card-body .social-links {
+  display: flex !important;
+  align-items: flex-end !important;
+  flex-direction: column !important;
+}
+.card-team .card-body ul li {
+  background-color: #fff !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin-bottom: 4px !important;
+  text-align: center !important;
+  transition: background-color 0.3s ease !important;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+}
+.card-team .card-body ul li a {
+  display: flex !important;
+  align-items: center !important;
+  color: #cf8a17 !important;
+}
+.card-team .card-body ul li:hover {
+  background-color: #cf8a17 !important;
+}
+.card-team .card-body ul li:hover a {
+  color: #fff !important;
+}
+.card-team .card-body .share-button {
+  color: #fff !important;
+  background-color: #cf8a17 !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+  justify-content: center !important;
+  text-align: center !important;
+  margin: -16px auto !important;
+  display: flex !important;
+  z-index: 2 !important;
+  position: relative !important;
+  align-items: center !important;
+}
+.card-team .card-body .info {
+  background-color: #271f10 !important;
+  color: #fff !important;
+  transition: 2s !important;
+  text-align: center !important;
+  border-bottom: 1px solid #cf8a17 !important;
+  z-index: 10 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.card-team .card-body:hover .info {
+  background-color: #cf8a17 !important;
+  z-index: 100 !important;
+}
+.card-team .card-body:hover .share-button {
+  color: #cf8a17 !important;
+  background-color: #fff !important;
+}
 
-/* Responsive ayarlar */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 30px !important; /* Buton genişliği */
+  height: 30px !important; /* Buton yüksekliği */
+  border-radius: 50% !important; /* Yuvarlak buton */
+  background-color: #c88b21 !important; /* Buton rengi */
+  border: none !important; /* Kenarlık yok */
+  display: flex !important; /* Flex kullanarak içerik ortalanacak */
+  align-items: center !important; /* Dikey ortalama */
+  justify-content: center !important; /* Yatay ortalama */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Ok simgelerinin arka planı şeffaf */
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.carousel-control-prev {
+  left: -15px !important;
+  top: 40% !important; /* Sol ok butonunun konumu */
+}
+
+.carousel-control-next {
+  right: -15px !important;
+  top: 40% !important; /* Sağ ok butonunun konumu */
+}
+
+@media (max-width: 375px) {
+  .card-team {
+    flex: 1 1 100% !important; /* XS için 1 kart */
+  }
+}
 @media (max-width: 992px) {
-  .quotes-slider .slick-prev {
+  .slick-prev {
     left: 10px;
   }
 
-  .quotes-slider .slick-next {
+  .slick-next {
     right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .carousel-control-prev {
+    left: -30px !important;
+    top: 47% !important; /* Sol ok butonunun konumu */
+  }
+
+  .carousel-control-next {
+    right: -30px !important;
+    top: 47% !important; /* Sağ ok butonunun konumu */
+  }
+}
+@media (max-width: 720px) {
+  .carousel-control-prev {
+    display: none !important;
+  }
+
+  .carousel-control-next {
+    display: none !important;
   }
 }
 
@@ -164,8 +287,8 @@
   }
 }
 
-.quotes-slider .slick-prev,
-.quotes-slider .slick-next {
+.slick-prev,
+.slick-next {
   display: none !important;
 }
 .idea {
@@ -296,20 +419,6 @@
   border-radius: 4px !important;
 }
 
-.carousel .list {
-  display: flex; /* Slaytları yan yana dizmek için */
-  transition: transform 0.8s ease; /* Geçiş süresi ve efekti */
-}
-
-.carousel .item {
-  min-width: 100%; /* Her slaytın tam genişlikte görünmesi için */
-  transition: opacity 0.8s ease; /* Opaklık geçişi */
-  opacity: 0; /* Başlangıçta görünmez */
-}
-
-.carousel .item.active {
-  opacity: 1; /* Aktif slayt görünür */
-}
 /* Küçük tablet boyutu için */
 @media screen and (max-width: 768px) {
   .navbar-brand img {
@@ -344,6 +453,26 @@
 
 .slide i {
   font-size: 12px;
+}
+
+.carousel-head {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-head .list {
+  display: flex;
+  transition: transform 0.9s ease;
+}
+
+.carousel-head .item {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.carousel-head .item.active {
+  opacity: 1;
 }
 
 /* Tablet için responsive */

@@ -92,21 +92,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // "prev" butonuna tıklama olayı
   if (prevDom) {
     prevDom.onclick = function () {
-      currentIndex = (currentIndex - 1 + thumbnailItemsDom.length) % thumbnailItemsDom.length; // Önceki index
+      currentIndex =
+        (currentIndex - 1 + thumbnailItemsDom.length) %
+        thumbnailItemsDom.length; // Önceki index
       updateSlider();
     };
   }
 
   function updateSlider() {
     // Tüm slaytları pasif yap
-    thumbnailItemsDom.forEach(item => {
-      item.classList.remove('active'); // Tüm slaytları pasif yap
+    thumbnailItemsDom.forEach((item) => {
+      item.classList.remove("active"); // Tüm slaytları pasif yap
       item.style.opacity = 0; // Opaklığı sıfırla
     });
 
     // Güncel slaytı ekle
     let currentSlide = thumbnailItemsDom[currentIndex]; // Aktif slaytı al
-    currentSlide.classList.add('active'); // Aktif slaytı göster
+    currentSlide.classList.add("active"); // Aktif slaytı göster
 
     // Opaklığı yavaşça artır
     setTimeout(() => {
@@ -650,41 +652,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  $(".team-slider").slick({
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 6000,
-    responsive: [
-      {
-        breakpoint: 1050,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 430,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(document).ready(function () {
   // Mevcut team-slider konfigürasyonu...
 
   // Quotes slider konfigürasyonu
@@ -713,4 +680,81 @@ $(document).ready(function () {
       },
     ],
   });
+});
+
+document.addEventListener("DOMContentLoaded", async function () {
+  const apiUrl = "https://dash.eterna.net.tr/api/public/personals";
+  const teamContainer = document.getElementById("team");
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+
+    let carouselItemHTML = "";
+    data.data.forEach((person, index) => {
+      const cardHTML = `
+              <div class="col">
+                  <div class="card-team h-100 border-0">
+                      <img src="${
+                        person.full_avatar
+                      }" class="card-img-top img-fluid" alt="${
+        person.full_name
+      }">
+                      <div class="card-body">
+                          <ul class="social-links professional-hideLink">
+                              <li><a href="${
+                                person.facebook || "#"
+                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
+                              <li><a href="${
+                                person.instagram || "#"
+                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                              <li><a href="${
+                                person.linkedin || "#"
+                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                          </ul>
+                          <button class="share-btn border-0 share-button">
+                              <i class="bi bi-plus"></i>
+                          </button>
+                          <div class="info mt-1 px-2 py-3">
+                              <a href="team-details.html">
+                                  <h5 class="card-title tow text-white m-0">${
+                                    person.full_name
+                                  }</h5>
+                              </a>
+                              <p class="card-text text-white">${
+                                person.title
+                              }</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          `;
+
+      if (index % 4 === 0) {
+        if (carouselItemHTML) {
+          carouselItemHTML += `</div></div>`;
+        }
+        carouselItemHTML += `<div class="carousel-item ${
+          index === 0 ? "active" : ""
+        }"><div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">`;
+      }
+      carouselItemHTML += cardHTML;
+    });
+
+    carouselItemHTML += `</div></div>`;
+    teamContainer.innerHTML = carouselItemHTML;
+
+    const shareButtons = document.querySelectorAll(".share-button");
+    shareButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const socialLinks = this.parentElement.querySelector(".social-links");
+        socialLinks.classList.toggle("visible");
+      });
+    });
+  } catch (error) {
+    console.error("There was a problem with the fetch operation:", error);
+  }
 });
