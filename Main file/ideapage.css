@@ -270,7 +270,7 @@
     top: 47% !important; /* Sağ ok butonunun konumu */
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
   .carousel-control-prev {
     display: none !important;
   }

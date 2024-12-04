@@ -699,7 +699,7 @@ document.addEventListener("DOMContentLoaded", async function () {
               <div class="col">
                   <div class="card-team h-100 border-0">
                       <img src="${
-                        person.full_avatar
+                        person.avatar_300
                       }" class="card-img-top img-fluid" alt="${
         person.full_name
       }">
