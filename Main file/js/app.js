@@ -601,8 +601,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tüm gerekli elementleri seçelim
   const modal = document.getElementById("basvurModal");
   const basvurBtn = document.getElementById("basvurButton");
+  const floatingButton = document.getElementById("floatingButton");
   const iconBtn = document.getElementById("iconButton");
-  const span = document.getElementsByClassName("close")[0];
+  const closeModalButton = document.getElementsByClassName("close")[0];
+
+  // Modal açma fonksiyonu
+  function openModal() {
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // Arka plan kaydırmasını engelle
+  }
+
+  // Modal kapatma fonksiyonu
+  function closeModal() {
+    modal.style.opacity = "0";
+    setTimeout(() => {
+      modal.style.display = "none";
+      modal.style.opacity = "1";
+      document.body.style.overflow = "auto"; // Arka plan kaydırmasını geri aç
+    }, 300);
+  }
 
   // İkon butonuna tıklama olayı
   if (iconBtn) {
@@ -623,32 +640,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Modal açma fonksiyonu
-  function openModal() {
-    modal.style.display = "flex";
-    document.body.style.overflow = "hidden";
+  // Floating butona tıklama olayı
+  if (floatingButton) {
+    floatingButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      openModal();
+    });
   }
 
-  // Modal kapatma olayları
-  if (span) {
-    span.addEventListener("click", closeModal);
+  // Kapatma butonuna tıklama olayı
+  if (closeModalButton) {
+    closeModalButton.addEventListener("click", closeModal);
   }
 
+  // Modal dışına tıklanırsa modalı kapat
   window.addEventListener("click", function (event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
       closeModal();
     }
   });
-
-  // Modal kapatma fonksiyonu
-  function closeModal() {
-    modal.style.opacity = "0";
-    setTimeout(() => {
-      modal.style.display = "none";
-      modal.style.opacity = "1";
-      document.body.style.overflow = "auto";
-    }, 300);
-  }
 });
 
 $(document).ready(function () {
@@ -758,3 +768,25 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("There was a problem with the fetch operation:", error);
   }
 });
+
+let calcScrollValueTwo = () => {
+  const floatingButton = document.getElementById("floatingButton");
+  const pos = document.documentElement.scrollTop;
+
+  // Sayfa kaydırıldığında butonu göster
+  if (pos > 100) {
+    floatingButton.style.display = "flex"; // Sabit butonu göster
+  } else {
+    floatingButton.style.display = "none"; // Sabit butonu gizle
+  }
+};
+
+// Butona tıklandığında sayfayı yukarı kaydır
+const applyButton = document.getElementById("applyButton");
+applyButton.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0; // Sayfayı en üste kaydır
+});
+
+// Olay dinleyicileri
+window.addEventListener("scroll", calcScrollValueTwo);
+window.addEventListener("load", calcScrollValueTwo);

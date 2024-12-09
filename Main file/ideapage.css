@@ -1,3 +1,19 @@
+.navbar {
+  padding: 10px 15px !important;
+  /* Navbar'ın üst ve alt padding değerlerini koruyun */
+}
+
+.brand-logo img {
+  max-width: 120px !important; /* Logo boyutunu artırın */
+  height: auto; /* Yüksekliği otomatik ayarlayın */
+}
+
+.navbar-brand img {
+  max-width: 120px; /* Logo boyutunu artırın */
+  transition: all 0.3s ease;
+  height: auto; /* Yüksekliği otomatik ayarlayın */
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -245,6 +261,36 @@
   top: 40% !important; /* Sağ ok butonunun konumu */
 }
 
+/* ... existing code ... */
+/* ... existing code ... */
+.floating-button {
+  position: fixed; /* Sabit konum */
+  bottom: 20px; /* Alt taraftan 20 piksel yukarıda */
+  left: 20px; /* Sol taraftan 20 piksel */
+  display: none; /* Başlangıçta gizli */
+  z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+.floating-button .apply-button {
+  background-color: #cf8a17; /* Buton rengi */
+  color: #fff; /* Buton yazı rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 50%; /* Yuvarlak yapmak için */
+  width: 80px; /* Buton genişliği */
+  height: 80px; /* Buton yüksekliği */
+  cursor: pointer; /* İmleç değişimi */
+  font-size: 16px; /* Yazı boyutu */
+  display: flex; /* İçerik için flex kullan */
+  align-items: center; /* Dikey ortalama */
+  justify-content: center; /* Yatay ortalama */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+.apply-button:hover {
+  background-color: #976510;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.6s ease !important;
+}
 @media (max-width: 375px) {
   .card-team {
     flex: 1 1 100% !important; /* XS için 1 kart */
@@ -388,15 +434,6 @@
   transform: scale(0.95);
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-brand img {
-  max-width: 100px;
-  transition: all 0.3s ease;
-}
 .home-one .video-part {
   display: flex;
   justify-content: center;
@@ -418,11 +455,14 @@
   aspect-ratio: 1200 / 1100 !important;
   border-radius: 4px !important;
 }
+.footer-image {
+  max-width: 120px !important;
+}
 
 /* Küçük tablet boyutu için */
 @media screen and (max-width: 768px) {
   .navbar-brand img {
-    max-width: 90px;
+    max-width: 90px !important;
   }
   .footer-image {
     max-width: 130px !important;
@@ -433,7 +473,12 @@
 /* Mobil boyut için */
 @media screen and (max-width: 576px) {
   .navbar-brand img {
-    max-width: 70px;
+    max-width: 90px !important;
+  }
+
+  .floating-button .apply-button {
+    width: 60px; /* Buton genişliği */
+    height: 60px; /* Buton yüksekliği */
   }
 }
 
@@ -474,7 +519,13 @@
 .carousel-head .item.active {
   opacity: 1;
 }
+.link-icons:hover {
+  color: #cb8815;
+}
 
+.col-footer {
+  padding: 0 !important;
+}
 /* Tablet için responsive */
 @media screen and (max-width: 992px) {
   .slide p {
