@@ -1200,7 +1200,7 @@ nav ul li .nav-link:hover {
   transition: 2s;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100% !important;
 }
 .home-one
   .awards-and-achievements

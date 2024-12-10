@@ -1,17 +1,16 @@
 .navbar {
   padding: 10px 15px !important;
-  /* Navbar'ın üst ve alt padding değerlerini koruyun */
 }
 
 .brand-logo img {
-  max-width: 120px !important; /* Logo boyutunu artırın */
-  height: auto; /* Yüksekliği otomatik ayarlayın */
+  max-width: 120px !important;
+  height: auto;
 }
 
 .navbar-brand img {
-  max-width: 120px; /* Logo boyutunu artırın */
+  max-width: 120px;
   transition: all 0.3s ease;
-  height: auto; /* Yüksekliği otomatik ayarlayın */
+  height: auto;
 }
 
 .modal {
@@ -161,8 +160,23 @@
   font-size: 20px;
   opacity: 1;
 }
+
+.full-image {
+  max-width: 100% !important;
+  max-height: 1200px !important;
+  background-size: cover !important; /* Varsayılan olarak cover */
+}
 .card-team {
   background-color: transparent !important;
+}
+.single-link {
+  display: flex;
+  font-size: 24px;
+  gap: 20px;
+}
+.link-images img {
+  max-width: 140px !important;
+  overflow: visible !important;
 }
 .card-team img {
   z-index: -10 !important;
@@ -231,59 +245,59 @@
   color: #cf8a17 !important;
   background-color: #fff !important;
 }
-
+.idea-right {
+  padding-top: 5px !important;
+}
 .carousel-control-prev,
 .carousel-control-next {
-  width: 30px !important; /* Buton genişliği */
-  height: 30px !important; /* Buton yüksekliği */
-  border-radius: 50% !important; /* Yuvarlak buton */
-  background-color: #c88b21 !important; /* Buton rengi */
-  border: none !important; /* Kenarlık yok */
-  display: flex !important; /* Flex kullanarak içerik ortalanacak */
-  align-items: center !important; /* Dikey ortalama */
-  justify-content: center !important; /* Yatay ortalama */
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  background-color: #c88b21 !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: transparent; /* Ok simgelerinin arka planı şeffaf */
+  background-color: transparent;
   width: 20px !important;
   height: 20px !important;
 }
 
 .carousel-control-prev {
   left: -15px !important;
-  top: 40% !important; /* Sol ok butonunun konumu */
+  top: 40% !important;
 }
 
 .carousel-control-next {
   right: -15px !important;
-  top: 40% !important; /* Sağ ok butonunun konumu */
+  top: 40% !important;
 }
 
-/* ... existing code ... */
-/* ... existing code ... */
 .floating-button {
-  position: fixed; /* Sabit konum */
-  bottom: 20px; /* Alt taraftan 20 piksel yukarıda */
-  left: 20px; /* Sol taraftan 20 piksel */
-  display: none; /* Başlangıçta gizli */
-  z-index: 1000; /* Diğer içeriklerin üstünde görünmesi için */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+  z-index: 1000;
 }
 
 .floating-button .apply-button {
-  background-color: #cf8a17; /* Buton rengi */
-  color: #fff; /* Buton yazı rengi */
-  border: none; /* Kenarlık yok */
-  border-radius: 50%; /* Yuvarlak yapmak için */
-  width: 80px; /* Buton genişliği */
-  height: 80px; /* Buton yüksekliği */
-  cursor: pointer; /* İmleç değişimi */
-  font-size: 16px; /* Yazı boyutu */
-  display: flex; /* İçerik için flex kullan */
-  align-items: center; /* Dikey ortalama */
-  justify-content: center; /* Yatay ortalama */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+  background-color: #cf8a17;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .apply-button:hover {
   background-color: #976510;
@@ -314,6 +328,9 @@
   .carousel-control-next {
     right: -30px !important;
     top: 47% !important; /* Sağ ok butonunun konumu */
+  }
+  .four-line {
+    display: none !important;
   }
 }
 @media (max-width: 600px) {
@@ -377,6 +394,11 @@
 
   .modal-content iframe {
     height: calc(60vh - 40px);
+  }
+}
+@media (max-witdh: 400px) {
+  .link-images img {
+    width: 40px !important;
   }
 }
 
@@ -511,7 +533,6 @@
 }
 
 .carousel-head .item {
-  min-width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -526,6 +547,7 @@
 .col-footer {
   padding: 0 !important;
 }
+
 /* Tablet için responsive */
 @media screen and (max-width: 992px) {
   .slide p {
@@ -536,7 +558,6 @@
   }
 }
 
-/* Mobil için responsive */
 @media screen and (max-width: 576px) {
   .slide p {
     font-size: 12px;
@@ -546,52 +567,8 @@
   }
 }
 
-.link-images {
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.link-images img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  transition: all 0.3s ease;
-}
-
-/* Büyük ekranlar için */
-@media screen and (min-width: 1200px) {
-  .link-images {
-    width: 50%;
-  }
-}
-
-/* Tablet boyutu için */
-@media screen and (max-width: 992px) {
-  .link-images {
-    width: 50%;
-  }
-}
-
-/* Küçük tablet boyutu için */
-@media screen and (max-width: 768px) {
-  .link-images {
-    width: 50%;
-  }
-}
-
-/* Mobil boyut için */
-@media screen and (max-width: 576px) {
-  .link-images {
-    width: 50%;
-  }
-}
-
-/* Çok küçük ekranlar için */
-@media screen and (max-width: 375px) {
-  .link-images {
-    width: 60%;
+@media screen and (min-width: 1000px) {
+  .single-link-footer {
+    margin-top: 10px !important;
   }
 }

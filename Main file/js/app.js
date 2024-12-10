@@ -594,45 +594,40 @@ function updatePagination() {
   blogCards.forEach((card) => card.classList.remove("blog-active"));
   blogCards[currentValueBlog - 1].classList.add("blog-active");
 }
-// Add event listeners to the pagination links
+
 paginationLinks.forEach((link) => link.addEventListener("click", activeLink));
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Tüm gerekli elementleri seçelim
   const modal = document.getElementById("basvurModal");
   const basvurBtn = document.getElementById("basvurButton");
   const floatingButton = document.getElementById("floatingButton");
   const iconBtn = document.getElementById("iconButton");
   const closeModalButton = document.getElementsByClassName("close")[0];
 
-  // Modal açma fonksiyonu
   function openModal() {
     modal.style.display = "flex";
-    document.body.style.overflow = "hidden"; // Arka plan kaydırmasını engelle
+    document.body.style.overflow = "hidden";
   }
 
-  // Modal kapatma fonksiyonu
   function closeModal() {
     modal.style.opacity = "0";
     setTimeout(() => {
       modal.style.display = "none";
       modal.style.opacity = "1";
-      document.body.style.overflow = "auto"; // Arka plan kaydırmasını geri aç
+      document.body.style.overflow = "auto";
     }, 300);
   }
 
-  // İkon butonuna tıklama olayı
   if (iconBtn) {
     iconBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      console.log("İkon butonuna tıklandı"); // Test için
+      console.log("İkon butonuna tıklandı");
       openModal();
     });
   } else {
-    console.log("İkon butonu bulunamadı"); // Hata tespiti için
+    console.log("İkon butonu bulunamadı");
   }
 
-  // Başvur butonuna tıklama olayı
   if (basvurBtn) {
     basvurBtn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -640,7 +635,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Floating butona tıklama olayı
   if (floatingButton) {
     floatingButton.addEventListener("click", function (e) {
       e.preventDefault();
@@ -648,12 +642,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Kapatma butonuna tıklama olayı
   if (closeModalButton) {
     closeModalButton.addEventListener("click", closeModal);
   }
 
-  // Modal dışına tıklanırsa modalı kapat
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       closeModal();
@@ -662,9 +654,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-  // Mevcut team-slider konfigürasyonu...
-
-  // Quotes slider konfigürasyonu
   $(".quotes-slider").slick({
     dots: true,
     infinite: true,
@@ -769,24 +758,27 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
+const carousel = new bootstrap.Carousel(document.getElementById("teamSlider"), {
+  wrap: true,
+});
+
+carousel.to(0);
+
 let calcScrollValueTwo = () => {
   const floatingButton = document.getElementById("floatingButton");
   const pos = document.documentElement.scrollTop;
 
-  // Sayfa kaydırıldığında butonu göster
   if (pos > 100) {
-    floatingButton.style.display = "flex"; // Sabit butonu göster
+    floatingButton.style.display = "flex";
   } else {
-    floatingButton.style.display = "none"; // Sabit butonu gizle
+    floatingButton.style.display = "none";
   }
 };
 
-// Butona tıklandığında sayfayı yukarı kaydır
 const applyButton = document.getElementById("applyButton");
 applyButton.addEventListener("click", () => {
-  document.documentElement.scrollTop = 0; // Sayfayı en üste kaydır
+  document.documentElement.scrollTop = 0;
 });
 
-// Olay dinleyicileri
 window.addEventListener("scroll", calcScrollValueTwo);
 window.addEventListener("load", calcScrollValueTwo);
