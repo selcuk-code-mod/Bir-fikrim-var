@@ -245,6 +245,12 @@
   color: #cf8a17 !important;
   background-color: #fff !important;
 }
+
+@media (max-width: 375px) {
+  .card-team {
+    flex: 1 1 100% !important; /* XS için 1 kart */
+  }
+}
 .idea-right {
   padding-top: 5px !important;
 }
@@ -305,11 +311,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.6s ease !important;
 }
-@media (max-width: 375px) {
-  .card-team {
-    flex: 1 1 100% !important; /* XS için 1 kart */
-  }
-}
+
 @media (max-width: 992px) {
   .slick-prev {
     left: 10px;
@@ -524,7 +526,7 @@
 
 .carousel-head {
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
 }
 
 .carousel-head .list {
@@ -535,6 +537,16 @@
 .carousel-head .item {
   opacity: 0;
   transition: opacity 0.5s ease;
+  height: 100% !important;
+
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.carousel-head .item img {
+  width: auto !important;
+  max-height: 600px !important;
 }
 
 .carousel-head .item.active {
@@ -565,10 +577,85 @@
   .slide i {
     font-size: 10px;
   }
+
+  .carousel-head .item {
+    height: 350px !important;
+    width: 300px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .carousel-head .item img {
+    max-height: 100% !important;
+    max-width: 95% !important;
+    object-fit: contain;
+  }
 }
 
 @media screen and (min-width: 1000px) {
   .single-link-footer {
     margin-top: 10px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-head .item {
+    height: auto !important;
+    width: 100vw !important;
+    display: block !important;
+  }
+  .carousel-head .item img {
+    height: auto !important;
+    width: 500px !important;
+    background-size: contain !important;
+  }
+  .amazing-work .arrows {
+    position: absolute;
+    top: 50% !important;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .flex {
+    margin-bottom: 250px !important;
+  }
+  .amazing-work {
+    padding-top: 300px !important;
+  }
+  .amazing-work .arrows {
+    position: absolute;
+    top: 38% !important;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .carousel-head .item img {
+    max-height: 95% !important;
+    max-width: 97% !important;
+    object-fit: contain;
+    padding-right: 10px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .amazing-work .arrows {
+    position: absolute;
+    top: 36% !important;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 }
