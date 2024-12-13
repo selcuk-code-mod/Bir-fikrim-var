@@ -126,249 +126,6 @@ shareButtons.forEach(function (shareButton, index) {
   });
 });
 
-// =====Google Maps Api=====
-function initMap() {
-  let mapOptions = {
-    center: { lat: 51.50852519215726, lng: -0.13461554383087837 },
-    zoom: 12,
-  };
-  let map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-  // infoWindow
-  let marker = new google.maps.Marker({
-    position: { lat: 51.50852519215726, lng: -0.13461554383087837 },
-    map: map,
-  });
-  const infoWindowOptions = {
-    position: { lat: 51.50852519215726, lng: -0.13461554383087837 },
-    pixelOffset: new google.maps.Size(-40, 10),
-  };
-  const infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-  infoWindow.setContent(`
-      <div class="first-title"> <h4>Global Locations</h4></div>
-    
-      <div class="all-location">
-        <div class="location-card">
-            <div class="location-header" onclick="toggleDetails('london')">
-                <span>London Office</span>
-                <span class="toggle-button" id="london-button">+</span>
-            </div>
-            <div class="location-details" id="london-details">                     
-              <p>Phone:
-                <a class="text-white" href="tel:+1999806915">+199(980) 6915</a>
-              </p>
-              <p>Email:  
-                <a class="text-white" href="mailto:shifamoni@gmail.com">shifamoni@gmail.com</a>
-              </p>
-              <p>Address: 2709 Beverley Rd Brooklyn Nm</p>
-              <p>Hours: Fri-Mon: 6am - 9pm</p>
-            </div>
-        </div>
-
-        <div class="location-card">
-            <div class="location-header" onclick="toggleDetails('berlin')">
-                <span>Berlin Office</span>
-                <span class="toggle-button" id="berlin-button">+</span>
-            </div>
-            <div class="location-details" id="berlin-details">
-                <p>Phone:
-                <a class="text-white" href="tel:+1999806915">+199(980) 6915</a>
-              </p>
-              <p>Email:  
-                <a class="text-white" href="mailto:shifamoni@gmail.com">shifamoni@gmail.com</a>
-              </p>
-              <p>Address: 2709 Beverley Rd Brooklyn Nm</p>
-              <p>Hours: Fri-Mon: 6am - 9pm</p>
-            </div>
-        </div>
-
-        <div class="location-card">
-            <div class="location-header" onclick="toggleDetails('bangladesh')">
-                <span>Bangladesh Office</span>
-                <span class="toggle-button" id="bangladesh-button">+</span>
-            </div>
-            <div class="location-details" id="bangladesh-details">
-                <p>Phone:
-                <a class="text-white" href="tel:+1999806915">+199(980) 6915</a>
-              </p>
-              <p>Email:  
-                <a class="text-white" href="mailto:shifamoni@gmail.com">shifamoni@gmail.com</a>
-              </p>
-              <p>Address: 2709 Beverley Rd Brooklyn Nm</p>
-              <p>Hours: Fri-Mon: 6am - 9pm</p>
-            </div>
-        </div>
-
-      </div>     
-    `);
-
-  const infoWindowOpenOptions = {
-    map: map,
-    anchor: marker,
-    shouldFocus: false,
-  };
-
-  infoWindow.open(infoWindowOpenOptions);
-}
-function toggleDetails(location) {
-  // Hide all location details
-  var allDetails = document.querySelectorAll(".location-details");
-  var allButtons = document.querySelectorAll(".toggle-button");
-
-  allDetails.forEach(function (details) {
-    details.style.display = "none";
-  });
-
-  allButtons.forEach(function (button) {
-    button.textContent = "+";
-  });
-
-  // Show the selected location details
-  var details = document.getElementById(location + "-details");
-  var button = document.getElementById(location + "-button");
-
-  if (details.style.display === "block") {
-    details.style.display = "none";
-    button.textContent = "+";
-  } else {
-    details.style.display = "block";
-    button.textContent = "-";
-  }
-}
-
-//     <div class="location-card">
-//         <div class="location-header" onclick="toggleDetails('london')">
-//             <span>London Office</span>
-//             <span class="toggle-button" id="london-button">+</span>
-//         </div>
-//         <div class="location-details" id="london-details">
-//             <!-- Details for London Office -->
-//         </div>
-//     </div>
-//     <div class="location-card">
-//         <div class="location-header" onclick="toggleDetails('berlin')">
-//             <span>Berlin Office</span>
-//             <span class="toggle-button" id="berlin-button">-</span>
-//         </div>
-//         <div class="location-details" id="berlin-details">
-//             <p>Phone: 01063914760</p>
-//             <p>Email: info@comesupercheroes.com</p>
-//             <p>Address: 2709 Beverley Rd Brooklyn Nm</p>
-//             <p>Hours: Fri-Mon: 6am - 9pm</p>
-//         </div>
-//     </div>
-//     <div class="location-card">
-//         <div class="location-header" onclick="toggleDetails('bangladesh')">
-//             <span>Bangladesh Office</span>
-//             <span class="toggle-button" id="bangladesh-button">+</span>
-//         </div>
-//         <div class="location-details" id="bangladesh-details">
-//             <!-- Details for Bangladesh Office -->
-//         </div>
-//     </div>
-// </div>
-
-// function toggleDetails(location) {
-//   var details = document.getElementById(location + "-details");
-//   var button = document.getElementById(location + "-button");
-//   if (details.style.display === "block") {
-//     details.style.display = "none";
-//     button.textContent = "+";
-//   } else {
-//     details.style.display = "block";
-//     button.textContent = "-";
-//   }
-// }
-
-// =====Back to Button=====
-let calcScrollValue = () => {
-  let scrollProgress = document.getElementById("progress");
-  let progressValue = document.getElementById("progress-value");
-
-  let pos = document.documentElement.scrollTop;
-
-  let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  let scrollValue = Math.round((pos * 100) / calcHeight);
-
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
-    scrollProgress.style.display = "none";
-  }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  scrollProgress.style.background = `conic-gradient(#cf8a17 ${scrollValue}%, #fff ${scrollValue}%)`;
-};
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
-
-// =====counting numbers Home two=====
-document.addEventListener("DOMContentLoaded", function () {
-  function startCounter(elementId, endCount, duration) {
-    const element = document.getElementById(elementId);
-    if (element) {
-      let count = 0;
-      const increment = endCount / ((duration / 1000) * 60);
-      const interval = 1000 / 60;
-
-      const intervalId = setInterval(() => {
-        count += increment;
-        if (count >= endCount) {
-          count = endCount;
-          clearInterval(intervalId);
-        }
-        element.textContent = Math.ceil(count);
-      }, interval);
-    }
-  }
-
-  const counters = [
-    { id: "more-reviews", endCount: 2, duration: 2000 },
-    { id: "counting-one", endCount: 3900, duration: 8000 },
-    { id: "counting-two", endCount: 39, duration: 4000 },
-    { id: "award-number", endCount: 22, duration: 3000 },
-    { id: "rating-number-business", endCount: 90, duration: 7000 },
-    { id: "rating-number-happy", endCount: 80, duration: 6000 },
-    { id: "project-number", endCount: 25, duration: 6000 },
-    { id: "award-number-two", endCount: 45, duration: 10000 },
-    { id: "customer-number", endCount: 30, duration: 7000 },
-    { id: "team-number", endCount: 40, duration: 8000 },
-    { id: "rating-number-product", endCount: 70, duration: 5000 },
-    { id: "rating-number-tech", endCount: 60, duration: 4000 },
-    { id: "rating-number-customer", endCount: 80, duration: 6000 },
-    { id: "rating-number-network", endCount: 50, duration: 3000 },
-    { id: "rating-number-communi", endCount: 90, duration: 7000 },
-  ];
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const counter = counters.find(
-            (counter) => counter.id === entry.target.id
-          );
-          if (counter) {
-            startCounter(counter.id, counter.endCount, counter.duration);
-            observer.unobserve(entry.target); // Stop observing once the animation has started
-          }
-        }
-      });
-    },
-    { threshold: 0.1 }
-  ); // Adjust the threshold as needed
-
-  counters.forEach((counter) => {
-    const element = document.getElementById(counter.id);
-    if (element) {
-      observer.observe(element);
-    }
-  });
-});
-
 // =====window Video Popup Modal Plugin=====
 document.addEventListener("DOMContentLoaded", function () {
   const hideAOSAnimation = document.querySelector(".hideAOSAnimation");
@@ -693,58 +450,103 @@ document.addEventListener("DOMContentLoaded", async function () {
     const data = await response.json();
 
     let carouselItemHTML = "";
-    data.data.forEach((person, index) => {
-      const cardHTML = `
-              <div class="col">
-                  <div class="card-team h-100 border-0">
-                      <img src="${
-                        person.avatar_300
-                      }" class="card-img-top img-fluid" alt="${
-        person.full_name
-      }">
-                      <div class="card-body">
-                          <ul class="social-links professional-hideLink">
-                              <li><a href="${
-                                person.facebook || "#"
-                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
-                              <li><a href="${
-                                person.instagram || "#"
-                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                              <li><a href="${
-                                person.linkedin || "#"
-                              }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-                          </ul>
-                          <button class="share-btn border-0 share-button">
-                              <i class="bi bi-plus"></i>
-                          </button>
-                          <div class="info mt-1 px-2 py-3">
-                              <a href="team-details.html">
-                                  <h5 class="card-title tow text-white m-0">${
-                                    person.full_name
-                                  }</h5>
-                              </a>
-                              <p class="card-text text-white">${
-                                person.title
-                              }</p>
-                          </div>
-                      </div>
+    const totalCards = data.data.length; // Gerçek kart sayısı
+    const cardsPerRow = 4; // Her satırda gösterilecek kart sayısı
+    const totalRows = Math.ceil(totalCards / cardsPerRow); // Toplam satır sayısı
+
+    const referenceCard = totalCards >= 15 ? data.data[14] : null;
+
+    for (let row = 0; row < totalRows; row++) {
+      carouselItemHTML += `<div class="carousel-item ${
+        row === 0 ? "active" : ""
+      }"><div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">`;
+
+      for (let col = 0; col < cardsPerRow; col++) {
+        const index = row * cardsPerRow + col;
+
+        if (index < totalCards) {
+          const person = data.data[index];
+          const cardHTML = `
+            <div class="col">
+              <div class="card-team h-100 border-0">
+                <img src="${
+                  person.avatar_300
+                }" class="card-img-top img-fluid" alt="${person.full_name}">
+                <div class="card-body">
+                  <ul class="social-links professional-hideLink">
+                    <li><a href="${
+                      person.facebook || "#"
+                    }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="${
+                      person.instagram || "#"
+                    }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="${
+                      person.linkedin || "#"
+                    }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                  </ul>
+                  <button class="share-btn border-0 share-button">
+                    <i class="bi bi-plus"></i>
+                  </button>
+                  <div class="info mt-1 px-2 py-3">
+                    <a href="team-details.html">
+                      <h5 class="card-title tow text-white m-0">${
+                        person.full_name
+                      }</h5>
+                    </a>
+                    <p class="card-text text-white">${person.title}</p>
                   </div>
+                </div>
               </div>
+            </div>
           `;
-
-      if (index % 4 === 0) {
-        if (carouselItemHTML) {
-          carouselItemHTML += `</div></div>`;
+          carouselItemHTML += cardHTML; // Gerçek kartı ekle
+        } else {
+          // Boş alan için 20. veriyi ekle
+          if (referenceCard) {
+            const placeholderHTML = `
+              <div class="col">
+                <div class="card-team h-100 border-0">
+                  <img src="${
+                    referenceCard.avatar_300
+                  }" class="card-img-top img-fluid" alt="${
+              referenceCard.full_name
+            }">
+                  <div class="card-body">
+                    <ul class="social-links professional-hideLink">
+                      <li><a href="${
+                        referenceCard.facebook || "#"
+                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
+                      <li><a href="${
+                        referenceCard.instagram || "#"
+                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                      <li><a href="${
+                        referenceCard.linkedin || "#"
+                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                    <button class="share-btn border-0 share-button">
+                      <i class="bi bi-plus"></i>
+                    </button>
+                    <div class="info mt-1 px-2 py-3">
+                      <a href="team-details.html">
+                        <h5 class="card-title tow text-white m-0">${
+                          referenceCard.full_name
+                        }</h5>
+                      </a>
+                      <p class="card-text text-white">${referenceCard.title}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+            carouselItemHTML += placeholderHTML; // 20. veriyi ekle
+          }
         }
-        carouselItemHTML += `<div class="carousel-item ${
-          index === 0 ? "active" : ""
-        }"><div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">`;
       }
-      carouselItemHTML += cardHTML;
-    });
 
-    carouselItemHTML += `</div></div>`;
-    teamContainer.innerHTML = carouselItemHTML;
+      carouselItemHTML += `</div></div>`; // Satırı kapat
+    }
+
+    teamContainer.innerHTML = carouselItemHTML; // Kartları göster
 
     const shareButtons = document.querySelectorAll(".share-button");
     shareButtons.forEach((button) => {
