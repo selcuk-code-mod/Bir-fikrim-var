@@ -23,6 +23,31 @@ function applyTextRotation(selector, degree) {
   }
 }
 
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+
+  let pos = document.documentElement.scrollTop;
+
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#cf8a17 ${scrollValue}%, #fff ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
 // Apply rotation to the desired elements
 applyTextRotation(".animated-circle.bannerOne .text p", 8.3);
 applyTextRotation(".animated-circle.about .text p", 8.3);
@@ -450,9 +475,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     const data = await response.json();
 
     let carouselItemHTML = "";
-    const totalCards = data.data.length; // Gerçek kart sayısı
-    const cardsPerRow = 4; // Her satırda gösterilecek kart sayısı
-    const totalRows = Math.ceil(totalCards / cardsPerRow); // Toplam satır sayısı
+    const totalCards = data.data.length;
+    const cardsPerRow = 4;
+    const totalRows = Math.ceil(totalCards / cardsPerRow);
 
     const referenceCard = totalCards >= 15 ? data.data[14] : null;
 
@@ -499,9 +524,8 @@ document.addEventListener("DOMContentLoaded", async function () {
               </div>
             </div>
           `;
-          carouselItemHTML += cardHTML; // Gerçek kartı ekle
+          carouselItemHTML += cardHTML;
         } else {
-          // Boş alan için 20. veriyi ekle
           if (referenceCard) {
             const placeholderHTML = `
               <div class="col">
@@ -538,15 +562,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                 </div>
               </div>
             `;
-            carouselItemHTML += placeholderHTML; // 20. veriyi ekle
+            carouselItemHTML += placeholderHTML;
           }
         }
       }
 
-      carouselItemHTML += `</div></div>`; // Satırı kapat
+      carouselItemHTML += `</div></div>`;
     }
 
-    teamContainer.innerHTML = carouselItemHTML; // Kartları göster
+    teamContainer.innerHTML = carouselItemHTML;
 
     const shareButtons = document.querySelectorAll(".share-button");
     shareButtons.forEach((button) => {
