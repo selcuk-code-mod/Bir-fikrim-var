@@ -1155,11 +1155,106 @@
       </section>
     </main>
     <div id="basvurModal" class="modal">
-      <div class="modal-content">
+      <div class="modal-content form-content">
+        <div class="d-flex justify-content-center align-items-center">
+          <div
+            id="liveAlertPlaceholder"
+            class="pb-4 w-50 d-flex justify-content-center align-items-center"
+          ></div>
+        </div>
+
         <span class="close">&times;</span>
-        <iframe src="https://www.eterna.net.tr/form/5" frameborder="0"></iframe>
+
+        <form
+          id="ideaFormContent"
+          class="popup-form"
+          action="https://formspree.io/f/xwkgveok"
+          method="post"
+        >
+          <input
+            type="hidden"
+            name="_token"
+            value="Y8uNvUyOyVTF8BDzfr3I4RbGl6AXGEFnPbuHT0lb"
+            autocomplete="off"
+          />
+          <h3 class="fs-4 text-center pb-2 h3-head">Bir Fikrim / Projem Var</h3>
+          <input type="hidden" name="formId" value="ideaForm" />
+
+          <div class="input-container row">
+            <input
+              type="text"
+              name="firstName"
+              placeholder="Adınız *"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Soyadınız *"
+              required
+            />
+          </div>
+
+          <div class="input-container row">
+            <input type="email" name="email" placeholder="Email *" required />
+            <input type="tel" name="phone" placeholder="Telefon  *" required />
+          </div>
+
+          <div class="input-container row">
+            <input type="text" name="city" placeholder="Şehir *" required />
+            <input
+              type="text"
+              name="projectName"
+              placeholder="Proje Adı *"
+              required
+            />
+          </div>
+
+          <textarea
+            name="projectSummary"
+            placeholder="Proje Kısa Özeti *"
+            required
+          ></textarea>
+          <textarea
+            name="marketOpportunities"
+            placeholder="Pazar Fırsatları *"
+            required
+          ></textarea>
+          <textarea
+            name="expectations"
+            placeholder="Beklentiler *"
+            required
+          ></textarea>
+          <div class="checkbox-group">
+            <p>Sizinle nasıl iletişime geçmemizi istersiniz?</p>
+            <div class="checkbox-option d-flex justify-content-evenly">
+              <div class="d-flex align-items-center">
+                <input
+                  type="checkbox"
+                  id="contact-email"
+                  name="contact"
+                  value="Email"
+                />
+                <label class="ps-1" for="contact-email">Email</label>
+              </div>
+              <div class="d-flex align-items-center">
+                <input
+                  type="checkbox"
+                  id="contact-phone"
+                  name="contact"
+                  value="Telefon"
+                />
+                <label class="ps-1" for="contact-phone">Telefon</label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-send mt-3">
+            <i class="fas fa-paper-plane"></i> Gönder
+          </button>
+        </form>
       </div>
     </div>
+
     <!-- =====Footer section===== -->
     <footer id="footer-href">
       <div class="container">

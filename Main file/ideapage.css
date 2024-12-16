@@ -23,7 +23,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   overflow: auto;
-  display: none;
+
   justify-content: center;
   align-items: center;
 }
@@ -483,6 +483,126 @@
   max-width: 120px !important;
 }
 
+#basvurModal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup-form textarea {
+  resize: vertical;
+}
+
+/* Button */
+.btn-send {
+  background-color: black !important;
+  color: white !important;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-send:hover {
+  background-color: rgb(151, 148, 148) !important;
+  color: #000 !important;
+}
+
+.modal-content {
+  width: 50%;
+  max-width: 400px;
+  min-height: 300px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.input-container input {
+  width: 48%;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #000;
+}
+.checkbox-group p {
+  color: #795f5f;
+  text-align: center;
+}
+.h3-head {
+  color: #795f5f !important;
+}
+
 /* Küçük tablet boyutu için */
 @media screen and (max-width: 768px) {
   .navbar-brand img {
@@ -501,8 +621,8 @@
   }
 
   .floating-button .apply-button {
-    width: 60px; /* Buton genişliği */
-    height: 60px; /* Buton yüksekliği */
+    width: 60px;
+    height: 60px;
   }
 }
 

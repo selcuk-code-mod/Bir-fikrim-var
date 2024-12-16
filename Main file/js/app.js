@@ -462,7 +462,6 @@ $(document).ready(function () {
     ],
   });
 });
-
 document.addEventListener("DOMContentLoaded", async function () {
   const apiUrl = "https://dash.eterna.net.tr/api/public/personals";
   const teamContainer = document.getElementById("team");
@@ -474,14 +473,32 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     const data = await response.json();
 
-    let carouselItemHTML = "";
-    const totalCards = data.data.length;
+    const fixedCards = data.data.slice(0, 8);
+
+    const remainingCards = data.data.slice(8);
+    const shuffledRemainingCards = shuffleArray(remainingCards);
+
+    const allCards = [...fixedCards, ...shuffledRemainingCards];
+
+    const totalCards = allCards.length;
     const cardsPerRow = 4;
     const totalRows = Math.ceil(totalCards / cardsPerRow);
+    const totalNeeded = totalRows * cardsPerRow;
+    const additionalCardsNeeded = totalNeeded - totalCards;
 
-    const referenceCard = totalCards >= 15 ? data.data[14] : null;
+    if (additionalCardsNeeded > 0) {
+      const additionalCards = shuffledRemainingCards.slice(
+        0,
+        additionalCardsNeeded
+      );
+      allCards.push(...additionalCards);
+    }
 
-    for (let row = 0; row < totalRows; row++) {
+    let carouselItemHTML = "";
+    const finalTotalCards = allCards.length;
+    const finalTotalRows = Math.ceil(finalTotalCards / cardsPerRow);
+
+    for (let row = 0; row < finalTotalRows; row++) {
       carouselItemHTML += `<div class="carousel-item ${
         row === 0 ? "active" : ""
       }"><div class="row row-cols-2 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">`;
@@ -489,8 +506,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       for (let col = 0; col < cardsPerRow; col++) {
         const index = row * cardsPerRow + col;
 
-        if (index < totalCards) {
-          const person = data.data[index];
+        if (index < finalTotalCards) {
+          const person = allCards[index];
           const cardHTML = `
             <div class="col">
               <div class="card-team h-100 border-0">
@@ -525,45 +542,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             </div>
           `;
           carouselItemHTML += cardHTML;
-        } else {
-          if (referenceCard) {
-            const placeholderHTML = `
-              <div class="col">
-                <div class="card-team h-100 border-0">
-                  <img src="${
-                    referenceCard.avatar_300
-                  }" class="card-img-top img-fluid" alt="${
-              referenceCard.full_name
-            }">
-                  <div class="card-body">
-                    <ul class="social-links professional-hideLink">
-                      <li><a href="${
-                        referenceCard.facebook || "#"
-                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
-                      <li><a href="${
-                        referenceCard.instagram || "#"
-                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                      <li><a href="${
-                        referenceCard.linkedin || "#"
-                      }" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-                    </ul>
-                    <button class="share-btn border-0 share-button">
-                      <i class="bi bi-plus"></i>
-                    </button>
-                    <div class="info mt-1 px-2 py-3">
-                      <a href="team-details.html">
-                        <h5 class="card-title tow text-white m-0">${
-                          referenceCard.full_name
-                        }</h5>
-                      </a>
-                      <p class="card-text text-white">${referenceCard.title}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            `;
-            carouselItemHTML += placeholderHTML;
-          }
         }
       }
 
@@ -584,12 +562,19 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Değiştir
+  }
+  return array;
+}
+
 const carousel = new bootstrap.Carousel(document.getElementById("teamSlider"), {
   wrap: true,
 });
 
 carousel.to(0);
-
 let calcScrollValueTwo = () => {
   const floatingButton = document.getElementById("floatingButton");
   const pos = document.documentElement.scrollTop;
@@ -608,3 +593,45 @@ applyButton.addEventListener("click", () => {
 
 window.addEventListener("scroll", calcScrollValueTwo);
 window.addEventListener("load", calcScrollValueTwo);
+
+const form = document.getElementById("ideaFormContent");
+const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    "</div>",
+  ].join("");
+
+  alertPlaceholder.append(wrapper);
+};
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        form.reset();
+        appendAlert("Form başarıyla gönderildi!", "success");
+
+        const firstNameInput = form.querySelector('input[name="firstName"]');
+        firstNameInput.focus();
+      } else {
+        appendAlert("Form gönderilirken bir hata oluştu.", "danger");
+      }
+    })
+    .catch((error) => {
+      appendAlert("Form gönderilirken bir hata oluştu.", "danger");
+    });
+});
